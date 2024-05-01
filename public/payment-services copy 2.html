@@ -1,0 +1,452 @@
+<!doctype html>
+
+<!-- Include a default theme value to start with the theme of your preference, dark|light are accepted -->
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8"> <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <!-- SEO -->
+  <meta name="description" content="DashCore Powerful Responsive SaaS, Startup &amp; Technology HTML Template">
+  <meta name="keywords" content="template, bootstrap, business, creative agency, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, touch, creative, babel, webpack">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="5studios">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+  <!-- Page loading styles. Should be included inline to avoid loading it externally -->
+  <style>
+    @keyframes spinner {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    .page-loading {
+      background-color: #fff;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: all .4s ease-in-out .2s;
+      visibility: hidden;
+      width: 100%;
+      z-index: 99999
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1
+    }
+
+    .page-loading-inner {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity .2s ease-in-out;
+      width: 100%
+    }
+
+    .page-loading-inner>span {
+      color: #9397ad;
+      display: block;
+      font-size: 1rem;
+      font-weight: 400
+    }
+
+    .page-spinner {
+      animation: spinner .75s linear infinite;
+      border: .15em solid #b4b7c9;
+      border-radius: 50%;
+      border-right-color: transparent;
+      display: inline-block;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      width: 2.75rem
+    }
+
+    [data-bs-theme=dark] .page-loading {
+      background-color: #0b0f19
+    }
+
+    [data-bs-theme=dark] .page-loading-inner>span {
+      color: #fff;
+      opacity: .6
+    }
+
+    [data-bs-theme=dark] .page-spinner {
+      border-color: hsla(0, 0%, 100%, .4) transparent hsla(0, 0%, 100%, .4) hsla(0, 0%, 100%, .4)
+    }
+
+    .header.payment-services-header .custom-font-size {
+    font-size: 2.3rem !important; /* Adjust the size as needed */
+}
+
+    .btn-custom {
+  background-color: #367854 !important; /* Teal color */
+  color: #ffffff !important; /* White text color */
+}
+
+.btn-custom:hover {
+  background-color: #367854 !important; /* A darker teal for hover effect */
+  color: #ffffff !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;  /* Horizontally center the content */
+    width: 100%;              /* Take full width to center content within it */
+}
+
+.btn-custom {
+    font-size: 130% !important;    /* Increase the text size by 30% */
+    padding: 0.65rem 1.3rem; /* Increase padding proportionally */
+    margin-top: 20px;   /* Existing vertical margin for spacing */
+    border-width: 2px;  /* Optionally increase the border width if needed */
+    margin-bottom: 80px;
+}
+
+/* .custom-img {
+  width: 150%;
+  height: auto;
+  transform: scale(1.2) translate(-10%, 10%);
+} */
+
+.custom-img-s {
+  width: 150%;
+  height: auto;
+  transform: scale(1.2) translate(-10%, 10%);
+}
+
+.custom-img-m {
+  width: 150%;
+  height: auto;
+  transform: scale(1.5) translate(-20%, 20%);
+}
+
+.custom-img-l {
+  width: 150%;
+  height: auto;
+  transform: scale(1.8) translate(-15%, 20%);
+}
+
+  </style>
+  <link rel="icon" href="favicon.ico">
+  <title>DashCore - Powerful Responsive SaaS, Startup &amp; Technology HTML Template</title>
+
+  <!--
+    Compiled css styles.
+    We created and included a webpack configuration file you can compile the css.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <link rel="stylesheet" href="css/dashcore.41588051c3b03e83ed26.css">
+</head>
+
+<body> <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Page loading -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
+    </div>
+  </div>
+
+
+
+  <!-- Main content, everything should be placed inside this main tag but the nav and footer -->
+  <main class="position-relative overflow-hidden payment-services">
+    <section class="section with-promo">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Descubra o poder da mente subconsciente</span>
+                  <span class="d-block">para alcançar a vida</span>
+                <span class="fw-bold text-gradient text-gradient-success">dos seus sonhos</span>
+              </h2>
+            </div>
+            <p class="lead">Bem-vindo à jornada de transformação através da Hipnoterapia!</p>
+              <p class="lead">Já imaginou o que seria possível se pudesse desbloquear todo o potencial da sua mente? Se pudesse superar traumas do passado, eliminar hábitos indesejados e alcançar metas aparentemente inatingíveis? Com a hipnoterapia, você pode fazer exatamente isso e muito mais.</p>
+              <button class="btn btn-custom shadow-success" type="submit" data-loading-text="Sending...">
+                <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                <span class="text">Agende a sua consulta</span>
+              </button>
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup me-md-0">
+              <div class="screens cutout-md bottom-right" data-aos="fade-up">
+                <img src="img/payment-services/consulta1.jpg" alt="" class="custom-img-l">
+              </div>
+              <div class="promo-box card shadow bottom-left">
+              </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section with-promo anime-background">
+      <div class="shapes-container">
+        <div class="static-shape shape-main end-0"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Ismael Costa</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapeuta</span>
+              </h2>
+            </div>
+
+            <div class="section-heading">
+              <!-- <h2 class="heading-line">
+                <span class="d-block">Ismael Costa</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapeuta</span>
+              </h2> -->
+              <p class="lead">Hipnoterapeuta, com especialização em ansiedade, dedica-se a auxiliar as pessoas a superarem desafios emocionais.
+
+                Com vasta experiência, adopta abordagens holísticas inovadoras, combinadas com técnicas de hipnose, empatia e compreensão para criar uma experiência terapêutica única e eficaz.
+                
+                Ajuda os seus pacientes a compreender e ultrapassar as raízes da ansiedade, explorando questões profundas e que promovem mudanças duradouras.
+                
+                Comprometido em promover o bem-estar mental, que se reflete na transformação de vidas, proporcionando uma jornada guiada em direcção à paz interior e equilíbrio emocional.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup ms-md-0">
+              <div class="screens cutout-md bottom-left" data-aos="fade-up">
+                <img src="img/payment-services/ismael.jpg" alt="" class="custom-img-s">
+              </div>
+              <div class="promo-box card shadow top-right">
+              </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Gifts -->
+    <section class="section with-promo">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">O que é a</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapia?</span>
+              </h2>
+              <!-- <p class="lead">The More you Pay the More you Earn</p> -->
+            </div>
+            <p class="lead">A hipnoterapia é uma ferramenta poderosa que utiliza técnicas de hipnose para aceder ao subconsciente, onde se encontram armazenadas crenças, emoções e padrões de comportamento que moldam a nossa vida. Ao entrar num estado de relaxamento profundo, é possível desbloquear o potencial da sua mente para promover mudanças positivas e duradouras.</p>
+            <!-- <a href="#!" class="btn btn-primary">Learn More</a> -->
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup me-md-0">
+              <div class="screens cutout-md bottom-right" data-aos="fade-up">
+                <img src="img/payment-services/consulta2.jpg" alt="" class="custom-img-s">
+              </div>
+              <div class="promo-box card shadow bottom-left">
+              </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUARTA SECCIÓN -->
+    <section class="section with-promo anime-background">
+      <div class="shapes-container">
+        <div class="static-shape shape-main end-0"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Porque escolher a</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapia?</span>
+              </h2>
+            </div>
+
+            <div class="section-heading">
+              <p class="lead">A hipnoterapia demonstrou ser eficaz para superar desafios como fobias, vícios e ansiedade, através de uma abordagem natural sem recurso a medicamentos. Cada sessão é personalizada de acordo com as necessidades individuais, promovendo melhorias no bem-estar mental e emocional. Esta técnica actua directamente no subconsciente, resultando em alterações profundas e duradouras.</p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Agora é a sua vez de</span>
+                <span class="fw-bold text-gradient text-gradient-success">transformar a sua vida</span>
+              </h2>
+            </div>
+
+            <div class="section-heading">
+              <p class="lead">Está pronto para libertar o seu potencial e alcançar a vida dos seus sonhos? Agende a sua consulta ainda hoje e dê o primeiro passo em direção à transformação. Não permita que o passado determine o seu futuro - descubra o poder da hipnoterapia e liberte-se para viver uma vida plena e realizada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- BOTÓN FINAL -->
+
+    <div class="button-container">
+      <button class="btn btn-custom shadow-success" type="submit" data-loading-text="Sending...">
+          <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          <span class="text">Agende agora</span>
+      </button>
+  </div>
+
+  <!-- TESTIMONIALS -->
+
+  <section class="section block card">
+    <div class="container">
+      <div class="testimonials-slider">
+        <div class="swiper">
+          <div class="button-container">
+            <h2 class="heading-line">
+              <span class="d-block">Testemunhos</span>
+              <!-- <span class="fw-bold text-gradient text-gradient-success">transformar a sua vida</span> -->
+            </h2>
+          </div>
+
+          <!-- data-sw-autoplay="2500" data-sw-loop="true" -->
+          <div class="swiper-wrapper text-center w-50">
+
+
+
+            <!-- TESTIMONIAL 1 -->
+            <div class="swiper-slide">
+              <div class="d-flex flex-column align-items-center">
+                <img src="../img/authors/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4">
+                <p class="w-75 lead mt-3">O Ismael é uma pessoa 5*. Na primeira consulta senti logo melhoria, e sei que no decorrer das consultas irei me sentir muito melhor. Tem paciência, é bom ouvinte e ajuda muito com as suas palavras. Nunca pensei que este tipo de tratamento fosse tão eficaz e ajudasse tanto no nosso bem estar. Só tenho a agradecer ao Ismael.</p>
+                <hr class="w-50">
+                <footer>
+                  <cite class="fw-bold text-primary text-uppercase">JT</cite>
+                  <p class="small text-secondary mt-0">Paciente</p>
+                </footer>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 2 -->
+
+            <div class="swiper-slide">
+              <div class="d-flex flex-column align-items-center">
+                <img src="../img/authors/avatar/2.jpg" alt="" class="rounded-circle shadow mb-4">
+                <p class="w-75 lead mt-3">Um profissional que nasceu para ajudar. Não sou muito de sentir confiança em me abrir, em dizer o que sinto. O Ismael é uma pessoa com um poder incrível em observar e analisar cada problema dentro de cada pessoa. Transmites me uma segurança e uma paz. Um Amigo para toda vida.. Sempre disponível para ajudar. Obrigada por tudo. </p>
+                <hr class="w-50">
+                <footer>
+                  <cite class="fw-bold text-primary text-uppercase">Célia Pereira</cite>
+                  <p class="small text-secondary mt-0">Paciente</p>
+                </footer>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 3 -->
+
+            <div class="swiper-slide">
+              <div class="d-flex flex-column align-items-center">
+                <img src="../img/authors/avatar/3.jpg" alt="" class="rounded-circle shadow mb-4">
+                <p class="w-75 lead mt-3">Obrigada Ismael por me estares a ajudar tanto. É um excelente profissional, compreensivo, paciente e é uma alavanca na minha vida. Ao fim de 4 sessões já não sei o que é ter uma crise de ansiedade, já consigo dormir de mente limpa, lido melhor com os desafios do dia a dia e consigo ser eu mesma em pleno. Recomendo vivamente!</p>
+                <hr class="w-50">
+                <footer>
+                  <cite class="fw-bold text-primary text-uppercase">Ana Teresa</cite>
+                  <p class="small text-secondary mt-0">Paciente</p>
+                </footer>
+              </div>
+            </div>
+
+            <!-- TESTIMONIAL 4 -->
+
+            <!-- <div class="swiper-slide">
+              <div class="d-flex flex-column align-items-center">
+                <img src="../img/authors/avatar/4.jpg" alt="" class="rounded-circle shadow mb-4">
+                <p class="w-75 lead mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem.</p>
+                <hr class="w-50">
+                <footer>
+                  <cite class="fw-bold text-primary text-uppercase">Isabella Lucas,</cite>
+                  <p class="small text-secondary mt-0">Awesome company</p>
+                </footer>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+        <div class="swiper-button swiper-button-prev rounded-circle shadow p-2">
+          <i data-feather="arrow-left"></i>
+        </div>
+        <div class="swiper-button swiper-button-next rounded-circle shadow p-2">
+          <i data-feather="arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <!-- Page footer -->
+
+      <!-- ./Footer - Simple -->
+      <footer class="site-footer section block card">
+        <div class="container py-4">
+          <div class="row align-items-center">
+            <div class="col-md-5 text-center text-md-left">
+              <nav class="nav justify-content-center justify-content-md-start">
+                <a class="nav-item nav-link" href="../about.html">About</a>
+                <a class="nav-item nav-link" href="../services.html">Services</a>
+                <a class="nav-item nav-link" href="../blog/">Blog</a>
+              </nav>
+            </div>
+            <div class="col-md-2 text-center">
+              <a href="../" class="link-logo">
+                <img src="../img/logo.svg" alt="" class="logo">
+              </a>
+            </div>
+            <div class="col-md-5 text-center text-md-right">
+              <p class="mt-2 mb-0 text-muted small">© 2024 5studios.net. All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning shadow-warning rounded-circle p-3 d-flex align-items-center justify-content-center scroll-to-top">
+    <i data-feather="chevron-up" width="18" height="18"></i>
+  </button>
+
+  <!--
+    Compiled js scripts.
+    We created and included a webpack configuration file you can compile the js.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <script src="js/dashcore.95cbb7260081cb946756.js"></script>
+  <script src="js/loading.b6bb5062cb3673f443b3.js"></script>
+</body>
+</html>

@@ -1,0 +1,1284 @@
+<!doctype html>
+
+<!-- Include a default theme value to start with the theme of your preference, dark|light are accepted -->
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8"> <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <!-- SEO -->
+  <meta name="description" content="DashCore Powerful Responsive SaaS, Startup &amp; Technology HTML Template">
+  <meta name="keywords" content="template, bootstrap, business, creative agency, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, touch, creative, babel, webpack">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="5studios">
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Optionally, preload your primary font if it's critical for the initial rendering -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900&display=swap" as="style">
+
+  <!-- Your regular stylesheet link to load the font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+  <!-- Page loading styles. Should be included inline to avoid loading it externally -->
+
+  <link rel="icon" href="favicon.ico">
+  <title>Ismael Costa - Hipnoterapeuta</title>
+
+  <!--
+    Compiled css styles.
+    We created and included a webpack configuration file you can compile the css.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+
+  <style>
+    [data-aos^="fade"][data-aos^="fade"] {
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+[data-aos="fade-up"] {
+  -webkit-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0);
+}
+@font-face {
+  font-family: swiper-icons;
+  font-style: normal;
+  font-weight: 400;
+  src: url("data:application/font-woff;charset=utf-8;base64, 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");
+}
+:root {
+  --swiper-theme-color: #007aff;
+}
+:host {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+:root {
+  --swiper-navigation-size: 44px;
+}
+/*!
+ * Dashcore 4.0 (https://themeforest.net/user/5studios)
+ * Sass & Startup HTML Template
+ * Main SCSS file
+ * Copyright 2024 The 5studios.net team (https://5studios.net)
+ *
+ * [ TABLE OF CONTENTS ]
+ *
+ * 1. RESET STYLES
+ * 2. NAVIGATION
+ *   2.1 - Navigation base styles
+ *   2.2 - Pills
+ * 3. FORMS
+ *   3.1 - Form
+ *   3.2 - Buttons
+ * 4. UTILITIES
+ *   4.1 - Background
+ *   4.2 - Border
+ *   4.3 - Devices
+ *   4.4 - Lists
+ *   4.5 - Misc
+ *   4.6 - Overlay
+ *   4.7 - Position
+ *   4.8 - Responsive
+ *   4.9 - Spacing
+ *   4.10 - Text
+ *   4.11 - Type
+ * 5. GENERAL CONTENT STYLES
+ *   5.1 - Page Loader
+ *   5.2 - Mockup
+ *   5.3 - Icons
+ * 6. SECTIONS
+ *   6.1 - General Styles
+ *   6.2 - Testimonials
+ *   6.3 - Footer
+ * 7. PRICING
+ *   7.1 - General styles
+ *   7.2 - Pricing heading
+ * 8. PAGE HEADING
+ * 9. CUSTOM
+ */ /*!
+ * Bootstrap custom components to include
+ * Include parts of Bootstrap framework, if you wish to include all,
+ * you can safely delete all the bellow imports and leave just the main bootstrap import file
+ * @import "bootstrap/scss/bootstrap";
+ */
+:root {
+  --dc-blue: #0d6efd;
+  --dc-indigo: #53f;
+  --dc-purple: #6f42c1;
+  --dc-pink: #f200c2;
+  --dc-red: #ff0080;
+  --dc-orange: #ff794f;
+  --dc-yellow: #ffc041;
+  --dc-green: #00b286;
+  --dc-teal: #20c997;
+  --dc-cyan: #0dcaf0;
+  --dc-white: #fff;
+  --dc-gray: #869ab8;
+  --dc-gray-dark: #242526;
+  --dc-gray-100: #f9fbfd;
+  --dc-gray-200: #f1f4f8;
+  --dc-gray-300: #d9e2ef;
+  --dc-gray-400: #c6d3e6;
+  --dc-gray-500: #abbcd5;
+  --dc-gray-600: #869ab8;
+  --dc-gray-700: #506690;
+  --dc-gray-800: #242526;
+  --dc-gray-900: #18191a;
+  --dc-primary: #53f;
+  --dc-secondary: #869ab8;
+  --dc-success: #00b286;
+  --dc-info: #0dcaf0;
+  --dc-warning: #ffc041;
+  --dc-danger: #ff0080;
+  --dc-light: #f9fbfd;
+  --dc-dark: #18191a;
+  --dc-darker: #111212;
+  --dc-black: #000;
+  --dc-primary-rgb: 85, 51, 255;
+  --dc-secondary-rgb: 134, 154, 184;
+  --dc-success-rgb: 0, 178, 134;
+  --dc-info-rgb: 13, 202, 240;
+  --dc-warning-rgb: 255, 192, 65;
+  --dc-danger-rgb: 255, 0, 128;
+  --dc-light-rgb: 249, 251, 253;
+  --dc-dark-rgb: 24, 25, 26;
+  --dc-darker-rgb: 17, 18, 18;
+  --dc-primary-text-emphasis: #221466;
+  --dc-secondary-text-emphasis: #363e4a;
+  --dc-success-text-emphasis: #004736;
+  --dc-info-text-emphasis: #055160;
+  --dc-warning-text-emphasis: #664d1a;
+  --dc-danger-text-emphasis: #603;
+  --dc-light-text-emphasis: #506690;
+  --dc-dark-text-emphasis: #506690;
+  --dc-primary-bg-subtle: #ddd6ff;
+  --dc-secondary-bg-subtle: #e7ebf1;
+  --dc-success-bg-subtle: #ccf0e7;
+  --dc-info-bg-subtle: #cff4fc;
+  --dc-warning-bg-subtle: #fff2d9;
+  --dc-danger-bg-subtle: #ffcce6;
+  --dc-light-bg-subtle: #fcfdfe;
+  --dc-dark-bg-subtle: #c6d3e6;
+  --dc-primary-border-subtle: #bbadff;
+  --dc-secondary-border-subtle: #cfd7e3;
+  --dc-success-border-subtle: #99e0cf;
+  --dc-info-border-subtle: #9eeaf9;
+  --dc-warning-border-subtle: #ffe6b3;
+  --dc-danger-border-subtle: #f9c;
+  --dc-light-border-subtle: #f1f4f8;
+  --dc-dark-border-subtle: #abbcd5;
+  --dc-white-rgb: 255, 255, 255;
+  --dc-black-rgb: 0, 0, 0;
+  --dc-font-sans-serif: "Poppins", sans-serif;
+  --dc-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --dc-gradient: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.15),
+    hsla(0, 0%, 100%, 0)
+  );
+  --dc-body-font-family: var(--dc-font-sans-serif);
+  --dc-body-font-size: 1rem;
+  --dc-body-font-weight: 300;
+  --dc-body-line-height: 1.5;
+  --dc-body-color: #506690;
+  --dc-body-color-rgb: 80, 102, 144;
+  --dc-body-bg: #fff;
+  --dc-body-bg-rgb: 255, 255, 255;
+  --dc-emphasis-color: #000;
+  --dc-emphasis-color-rgb: 0, 0, 0;
+  --dc-secondary-color: rgba(80, 102, 144, 0.75);
+  --dc-secondary-color-rgb: 80, 102, 144;
+  --dc-secondary-bg: #f1f4f8;
+  --dc-secondary-bg-rgb: 241, 244, 248;
+  --dc-tertiary-color: #d9e2ef;
+  --dc-tertiary-color-rgb: 217, 226, 239;
+  --dc-tertiary-bg: #f9fbfd;
+  --dc-tertiary-bg-rgb: 249, 251, 253;
+  --dc-heading-color: #111212;
+  --dc-link-color: #869ab8;
+  --dc-link-color-rgb: 134, 154, 184;
+  --dc-link-decoration: none;
+  --dc-link-hover-color: #53f;
+  --dc-link-hover-color-rgb: 85, 51, 255;
+  --dc-code-color: #f200c2;
+  --dc-highlight-color: #506690;
+  --dc-highlight-bg: #fff2d9;
+  --dc-border-width: 1px;
+  --dc-border-style: solid;
+  --dc-border-color: #d9e2ef;
+  --dc-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --dc-border-radius: 0.375rem;
+  --dc-border-radius-sm: 0.25rem;
+  --dc-border-radius-lg: 0.5rem;
+  --dc-border-radius-xl: 1rem;
+  --dc-border-radius-xxl: 2rem;
+  --dc-border-radius-2xl: var(--dc-border-radius-xxl);
+  --dc-border-radius-pill: 50rem;
+  --dc-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --dc-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --dc-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --dc-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --dc-focus-ring-width: 0.25rem;
+  --dc-focus-ring-opacity: 0.25;
+  --dc-focus-ring-color: rgba(85, 51, 255, 0.25);
+  --dc-form-valid-color: #00b286;
+  --dc-form-valid-border-color: #00b286;
+  --dc-form-invalid-color: #ff0080;
+  --dc-form-invalid-border-color: #ff0080;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  background-color: #fff;
+  background-color: var(--dc-body-bg);
+  color: #506690;
+  color: var(--dc-body-color);
+  font-family: Poppins, sans-serif;
+  font-family: var(--dc-body-font-family);
+  font-size: 1rem;
+  font-size: var(--dc-body-font-size);
+  font-weight: 300;
+  font-weight: var(--dc-body-font-weight);
+  line-height: 1.5;
+  line-height: var(--dc-body-line-height);
+  margin: 0;
+  text-align: var(--dc-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h2 {
+  color: #111212;
+  color: var(--dc-heading-color);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+figure {
+  margin: 0 0 1rem;
+}
+img {
+  vertical-align: middle;
+}
+button {
+  border-radius: 0;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+button {
+  text-transform: none;
+}
+[type="submit"],
+button {
+  -webkit-appearance: button;
+  appearance: none; /* Standard syntax */
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+::-webkit-inner-spin-button {
+  height: auto;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+::file-selector-button {
+  -webkit-appearance: button;
+  appearance: none; /* Standard syntax */
+  font: inherit;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.container {
+  --dc-gutter-x: 1.5rem;
+  --dc-gutter-y: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-left: calc(var(--dc-gutter-x) * 0.5);
+  padding-right: 0.75rem;
+  padding-right: calc(var(--dc-gutter-x) * 0.5);
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+:root {
+  --dc-breakpoint-xs: 0;
+  --dc-breakpoint-sm: 576px;
+  --dc-breakpoint-md: 768px;
+  --dc-breakpoint-lg: 992px;
+  --dc-breakpoint-xl: 1200px;
+  --dc-breakpoint-xxl: 1400px;
+}
+.row {
+  --dc-gutter-x: 1.5rem;
+  --dc-gutter-y: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-left: calc(var(--dc-gutter-x) * -0.5);
+  margin-right: -0.75rem;
+  margin-right: calc(var(--dc-gutter-x) * -0.5);
+  margin-top: 0;
+  margin-top: calc(var(--dc-gutter-y) * -1);
+}
+.row > * {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: var(--dc-gutter-y);
+  max-width: 100%;
+  padding-left: calc(var(--dc-gutter-x) * 0.5);
+  padding-right: calc(var(--dc-gutter-x) * 0.5);
+  width: 100%;
+}
+.g-4 {
+  --dc-gutter-x: 1.5rem;
+}
+.g-4 {
+  --dc-gutter-y: 1.5rem;
+}
+@media (min-width: 768px) {
+  .col-md-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+}
+.form-control[type="file"]:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+.form-control::file-selector-button {
+  background-color: #f9fbfd;
+  background-color: var(--dc-tertiary-bg);
+  border-color: inherit;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-right-width: var(--dc-border-width);
+  color: #506690;
+  color: var(--dc-body-color);
+  margin: -0.625rem 1.75rem -0.625rem -1.75rem;
+  padding: 0.625rem 1.75rem;
+  pointer-events: none;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-control::file-selector-button {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #f1f4f8;
+  background-color: var(--dc-secondary-bg);
+}
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: #f1f4f8;
+  background-color: var(--dc-secondary-bg);
+}
+.form-control-sm::file-selector-button {
+  margin: -0.475rem 1.25rem -0.475rem -1.25rem;
+  padding: 0.475rem 1.25rem;
+}
+.form-control-lg::file-selector-button {
+  margin: -0.785rem 2rem -0.785rem -2rem;
+  padding: 0.785rem 2rem;
+}
+.form-control-color:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+[data-bs-theme="dark"]
+  .form-switch
+  .form-check-input:not(:checked):not(:focus) {
+  --dc-form-switch-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='rgba(255, 255, 255, 0.25)'/%3E%3C/svg%3E");
+}
+.form-floating > .form-control-plaintext:not(:-moz-placeholder-shown),
+.form-floating > .form-control:not(:-moz-placeholder-shown) {
+  padding-bottom: 0.625rem;
+  padding-top: 1.625rem;
+}
+.form-floating > .form-control-plaintext:not(:-ms-input-placeholder),
+.form-floating > .form-control:not(:-ms-input-placeholder) {
+  padding-bottom: 0.625rem;
+  padding-top: 1.625rem;
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  color: rgba(80, 102, 144, 0.65);
+  color: rgba(var(--dc-body-color-rgb), 0.65);
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+.form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
+  color: rgba(80, 102, 144, 0.65);
+  color: rgba(var(--dc-body-color-rgb), 0.65);
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label:after {
+  background-color: #fff;
+  background-color: var(--dc-body-bg);
+  border-radius: 0.375rem;
+  border-radius: var(--dc-border-radius);
+  bottom: 1rem;
+  content: "";
+  height: 1.5em;
+  left: 0.875rem;
+  position: absolute;
+  right: 0.875rem;
+  top: 1rem;
+  z-index: -1;
+}
+.form-floating > .form-control:not(:-ms-input-placeholder) ~ label:after {
+  background-color: #fff;
+  background-color: var(--dc-body-bg);
+  border-radius: 0.375rem;
+  border-radius: var(--dc-border-radius);
+  bottom: 1rem;
+  content: "";
+  height: 1.5em;
+  left: 0.875rem;
+  position: absolute;
+  right: 0.875rem;
+  top: 1rem;
+  z-index: -1;
+}
+.input-group > .form-control:not(:focus).is-valid,
+.input-group > .form-floating:not(:focus-within).is-valid,
+.input-group > .form-select:not(:focus).is-valid,
+.was-validated .input-group > .form-control:not(:focus):valid,
+.was-validated .input-group > .form-floating:not(:focus-within):valid,
+.was-validated .input-group > .form-select:not(:focus):valid {
+  z-index: 3;
+}
+.input-group > .form-control:not(:focus).is-invalid,
+.input-group > .form-floating:not(:focus-within).is-invalid,
+.input-group > .form-select:not(:focus).is-invalid,
+.was-validated .input-group > .form-control:not(:focus):invalid,
+.was-validated .input-group > .form-floating:not(:focus-within):invalid,
+.was-validated .input-group > .form-select:not(:focus):invalid {
+  z-index: 4;
+}
+.btn {
+  --dc-btn-padding-x: 1.75rem;
+  --dc-btn-padding-y: 0.625rem;
+  --dc-btn-font-family: ;
+  --dc-btn-font-size: 0.875rem;
+  --dc-btn-font-weight: 600;
+  --dc-btn-line-height: 1.5;
+  --dc-btn-color: var(--dc-body-color);
+  --dc-btn-bg: transparent;
+  --dc-btn-border-width: var(--dc-border-width);
+  --dc-btn-border-color: transparent;
+  --dc-btn-border-radius: var(--dc-border-radius);
+  --dc-btn-hover-border-color: transparent;
+  --dc-btn-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  --dc-btn-disabled-opacity: 0.65;
+  --dc-btn-focus-box-shadow: 0 0 0 0 rgba(var(--dc-btn-focus-shadow-rgb), 0.5);
+  background-color: transparent;
+  background-color: var(--dc-btn-bg);
+  border: 1px solid transparent;
+  border: var(--dc-btn-border-width) solid var(--dc-btn-border-color);
+  border-radius: 0.375rem;
+  border-radius: var(--dc-btn-border-radius);
+  color: #506690;
+  color: var(--dc-btn-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--dc-btn-font-family);
+  font-size: 0.875rem;
+  font-size: var(--dc-btn-font-size);
+  font-weight: 600;
+  font-weight: var(--dc-btn-font-weight);
+  line-height: 1.5;
+  line-height: var(--dc-btn-line-height);
+  padding: 0.625rem 1.75rem;
+  padding: var(--dc-btn-padding-y) var(--dc-btn-padding-x);
+  text-align: center;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.btn:hover {
+  background-color: var(--dc-btn-hover-bg);
+  border-color: var(--dc-btn-hover-border-color);
+  color: var(--dc-btn-hover-color);
+}
+.btn:focus-visible {
+  background-color: var(--dc-btn-hover-bg);
+  border-color: var(--dc-btn-hover-border-color);
+  -webkit-box-shadow: var(--dc-btn-focus-box-shadow);
+  box-shadow: var(--dc-btn-focus-box-shadow);
+  color: var(--dc-btn-hover-color);
+  outline: 0;
+}
+.btn-check:focus-visible + .btn {
+  border-color: var(--dc-btn-hover-border-color);
+  -webkit-box-shadow: var(--dc-btn-focus-box-shadow);
+  box-shadow: var(--dc-btn-focus-box-shadow);
+  outline: 0;
+}
+:not(.btn-check) + .btn:active {
+  background-color: var(--dc-btn-active-bg);
+  border-color: var(--dc-btn-active-border-color);
+  color: var(--dc-btn-active-color);
+}
+.btn-check:checked + .btn:focus-visible,
+.btn.active:focus-visible,
+.btn.show:focus-visible,
+.btn:first-child:active:focus-visible,
+:not(.btn-check) + .btn:active:focus-visible {
+  -webkit-box-shadow: var(--dc-btn-focus-box-shadow);
+  box-shadow: var(--dc-btn-focus-box-shadow);
+}
+.btn:disabled {
+  background-color: var(--dc-btn-disabled-bg);
+  border-color: var(--dc-btn-disabled-border-color);
+  color: var(--dc-btn-disabled-color);
+  opacity: var(--dc-btn-disabled-opacity);
+  pointer-events: none;
+}
+.btn-link:focus-visible {
+  color: var(--dc-btn-color);
+}
+.nav-link:focus-visible {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(85, 51, 255, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(85, 51, 255, 0.25);
+  outline: 0;
+}
+.card {
+  --dc-card-spacer-y: 1.25rem;
+  --dc-card-spacer-x: 1.25rem;
+  --dc-card-title-spacer-y: 0.5rem;
+  --dc-card-title-color: ;
+  --dc-card-subtitle-color: ;
+  --dc-card-border-width: var(--dc-border-width);
+  --dc-card-border-color: var(--dc-border-color-translucent);
+  --dc-card-border-radius: var(--dc-border-radius-lg);
+  --dc-card-box-shadow: ;
+  --dc-card-inner-border-radius: calc(
+    var(--dc-border-radius-lg) - var(--dc-border-width)
+  );
+  --dc-card-cap-padding-y: 0.625rem;
+  --dc-card-cap-padding-x: 1.25rem;
+  --dc-card-cap-bg: rgba(var(--dc-body-color-rgb), 0.03);
+  --dc-card-cap-color: ;
+  --dc-card-height: ;
+  --dc-card-color: ;
+  --dc-card-bg: var(--dc-panel-bg);
+  --dc-card-img-overlay-padding: 1rem;
+  --dc-card-group-margin: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  color: #506690;
+  color: var(--dc-body-color);
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: var(--dc-card-height);
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  background-color: var(--dc-card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border: var(--dc-card-border-width) solid var(--dc-card-border-color);
+  border-radius: 0.5rem;
+  border-radius: var(--dc-card-border-radius);
+}
+.spinner-border {
+  -webkit-animation: var(--dc-spinner-animation-speed) linear infinite
+    var(--dc-spinner-animation-name);
+  animation: var(--dc-spinner-animation-speed) linear infinite
+    var(--dc-spinner-animation-name);
+  border-radius: 50%;
+  display: inline-block;
+  height: var(--dc-spinner-height);
+  vertical-align: var(--dc-spinner-vertical-align);
+  width: var(--dc-spinner-width);
+}
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+.spinner-border {
+  --dc-spinner-width: 2rem;
+  --dc-spinner-height: 2rem;
+  --dc-spinner-vertical-align: -0.125em;
+  --dc-spinner-border-width: 0.25em;
+  --dc-spinner-animation-speed: 0.75s;
+  --dc-spinner-animation-name: spinner-border;
+  border: 0.25em solid;
+  border: var(--dc-spinner-border-width) solid;
+  border-right: var(--dc-spinner-border-width) solid transparent;
+}
+.spinner-border-sm {
+  --dc-spinner-width: 1rem;
+  --dc-spinner-height: 1rem;
+  --dc-spinner-border-width: 0.2em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner-border {
+    --dc-spinner-animation-speed: 1.5s;
+  }
+}
+.icon-link-hover:focus-visible > .bi {
+  -webkit-transform: translate3d(0.25em, 0, 0);
+  transform: translate3d(0.25em, 0, 0);
+  -webkit-transform: var(--dc-icon-link-transform, translate3d(0.25em, 0, 0));
+  transform: var(--dc-icon-link-transform, translate3d(0.25em, 0, 0));
+}
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  width: 1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+.visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
+  position: absolute !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-none {
+  display: none !important;
+}
+.shadow {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  -webkit-box-shadow: var(--dc-box-shadow) !important;
+  box-shadow: var(--dc-box-shadow) !important;
+}
+.shadow-success {
+  -webkit-box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(0, 178, 134, 0.9) !important;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(0, 178, 134, 0.9) !important;
+}
+.align-items-start {
+  -webkit-box-align: start !important;
+  -ms-flex-align: start !important;
+  align-items: flex-start !important;
+}
+.fw-bold {
+  font-weight: 700 !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-gradient-success {
+  background-image: linear-gradient(
+    351deg,
+    #73c8a9 0%,    /* Soft teal - starts at the beginning */
+    #45a172 50%,   /* Lighter green - transitions up to the middle */
+    #367854 80%    /* Dark green - ends earlier to be less predominant */
+  ) !important;
+}
+@media (min-width: 768px) {
+  .me-md-0 {
+    margin-right: 0 !important;
+  }
+  .text-md-start {
+    text-align: left !important;
+  }
+}
+body {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+img {
+  vertical-align: middle;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --dc-panel-bg: #fff;
+  --dc-navbar-color-rgb: 255, 255, 255;
+  --dc-navbar-sticky-color-rgb: 0, 0, 0;
+}
+.shapes-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mockup {
+  position: relative;
+}
+.mockup {
+  margin: 0 auto;
+  max-width: 255px;
+}
+.mockup img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.cutout-md {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .cutout-md.bottom-right {
+    position: relative;
+  }
+  .cutout-md.bottom-right:after {
+    bottom: 0;
+    content: "";
+    height: 30px;
+    left: 0;
+    -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' preserveAspectRatio='none' viewBox='0 0 100 30'%3E%3Cpath d='M0 30h100L0 0z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' preserveAspectRatio='none' viewBox='0 0 100 30'%3E%3Cpath d='M0 30h100L0 0z'/%3E%3C/svg%3E");
+    -webkit-mask-position: 50%;
+    mask-position: 50%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+.with-promo .shape {
+  position: absolute;
+}
+.with-promo .mockup {
+  max-width: 285px;
+}
+.with-promo .promo-box {
+  border: none;
+  z-index: 2;
+}
+.with-promo .promo-box.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.with-promo .promo-box.bottom-left + .shapes-container .shape.pattern {
+  z-index: 0;
+}
+.with-promo .promo-box.bottom-left + .shapes-container .shape.pattern-dots {
+  background-color: transparent;
+  background-image: radial-gradient(#d9e2ef 2px, transparent 0);
+  background-size: 15px 15px;
+  height: 70%;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(50%, -30%);
+  transform: translate(50%, -30%);
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .with-promo .promo-box {
+    position: absolute;
+  }
+  .with-promo .promo-box.bottom-left {
+    -webkit-transform: translate(-10%, 50%);
+    transform: translate(-10%, 50%);
+  }
+}
+@media (min-width: 992px) {
+  .with-promo .promo-box.bottom-left {
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+  }
+}
+.with-promo .shapes-container {
+  z-index: -1;
+}
+.section,
+section {
+  position: relative;
+}
+.section [class^="container"],
+section [class^="container"] {
+  padding-bottom: 45px;
+  padding-top: 45px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .section [class^="container"],
+  section [class^="container"] {
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+}
+.section-heading {
+  margin-bottom: 60px;
+  position: relative;
+}
+.section-heading h2 {
+  font-size: 2.875rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.btn-custom {
+  background-color: #367854 !important; /* Teal color */
+  color: #ffffff !important; /* White text color */
+}
+
+.btn-custom:hover {
+  background-color: #367854 !important; /* A darker teal for hover effect */
+  color: #ffffff !important;
+}
+
+.btn-custom {
+    font-size: 130% !important;    /* Increase the text size by 30% */
+    padding: 0.65rem 1.3rem; /* Increase padding proportionally */
+    margin-top: 20px;   /* Existing vertical margin for spacing */
+    border-width: 2px;  /* Optionally increase the border width if needed */
+    margin-bottom: 80px;
+}
+
+.custom-img-l {
+  width: 150%;
+  height: auto;
+  transform: scale(1.8) translate(-15%, 25%);
+}
+
+
+  </style>
+  
+  <link rel="stylesheet" href="css/dashcore.41588051c3b03e83ed26.css">
+</head>
+
+<body> <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Page loading -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
+    </div>
+  </div>
+
+  <!-- Main content, everything should be placed inside this main tag but the nav and footer -->
+  <main class="position-relative overflow-hidden payment-services">
+
+    <!-- PRIMERA SECCIÓN -->
+
+    <section class="section with-promo">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Descubra o poder da mente subconsciente</span>
+                <span class="d-block">para alcançar a vida</span>
+                <span class="fw-bold text-gradient text-gradient-success">dos seus sonhos</span>
+              </h2>
+            </div>
+            <p class="lead">Bem-vindo à jornada de transformação através da Hipnoterapia! Já imaginou o que seria possível
+              se pudesse desbloquear todo o potencial da sua mente?</p>
+            <p class="lead">Se pudesse superar traumas do passado, eliminar hábitos indesejados e alcançar metas
+              aparentemente inatingíveis? Com a hipnoterapia, você pode fazer exatamente isso e muito mais.</p>
+            <button class="btn btn-custom shadow-success" type="submit" data-loading-text="Sending...">
+              <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              <span class="text">Agende a sua consulta</span>
+            </button>
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup me-md-0">
+              <div class="screens cutout-md bottom-right" data-aos="fade-up">
+                <img src="img/payment-services/consulta1.webp" alt="" class="custom-img-l">
+              </div>
+              <div class="promo-box card shadow bottom-left"> </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGUNDA SECCIÓN -->
+
+    <section class="section with-promo anime-background">
+      <div class="shapes-container">
+        <div class="static-shape shape-main end-0"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Ismael Costa</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapeuta</span>
+              </h2>
+            </div>
+            <div class="section-heading">
+              <p class="lead">Hipnoterapeuta, com especialização em ansiedade, dedica-se a auxiliar as pessoas a superarem desafios emocionais.Com vasta experiência, adopta abordagens holísticas inovadoras, combinadas com técnicas de hipnose, empatia e compreensão para criar uma experiência terapêutica única e eficaz.</p>
+              <p class="lead">Ajuda os seus pacientes a compreender e ultrapassar as raízes da ansiedade, explorando questões profundas e que promovem mudanças duradouras. Comprometido em promover o bem-estar mental, que se reflete na transformação de vidas, proporcionando uma jornada guiada em direcção à paz interior e equilíbrio emocional.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup ms-md-0">
+              <div class="screens cutout-md bottom-left" data-aos="fade-up">
+                <img src="img/payment-services/large.webp" alt="Description"
+     srcset="img/payment-services/small.webp 300w,
+             img/payment-services/medium.webp 600w,
+             img/payment-services/large.webp 900w"
+     sizes="(max-width: 600px) 300px,
+            (max-width: 900px) 600px,
+            900px">
+
+              </div>
+              <div class="promo-box card shadow top-right">
+              </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- TERCERA SECCIÓN -->
+
+    <section class="section with-promo">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">O que é a</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapia?</span>
+              </h2>
+              <!-- <p class="lead">The More you Pay the More you Earn</p> -->
+            </div>
+            <p class="lead">A hipnoterapia é uma ferramenta poderosa que utiliza técnicas de hipnose para aceder ao subconsciente, onde se encontram armazenadas crenças, emoções e padrões de comportamento que moldam a nossa vida.</p>
+            <p class="lead">Ao entrar num estado de relaxamento profundo, é possível desbloquear o potencial da sua mente para promover mudanças positivas e duradouras.</p>
+            <!-- <a href="#!" class="btn btn-primary">Learn More</a> -->
+          </div>
+          <div class="col-md-6">
+            <figure class="figure-box mockup me-md-0">
+              <div class="screens cutout-md bottom-right" data-aos="fade-up">
+                <img src="img/payment-services/consulta2.webp" alt="" class="custom-img-s">
+              </div>
+              <div class="promo-box card shadow bottom-left">
+              </div>
+              <div class="shapes-container">
+                <div class="shape pattern pattern-dots"></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUARTA SECCIÓN -->
+
+    <section class="section with-promo anime-background">
+      <div class="shapes-container">
+        <div class="static-shape shape-main end-0"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Porque escolher a</span>
+                <span class="fw-bold text-gradient text-gradient-success">Hipnoterapia?</span>
+              </h2>
+            </div>
+
+            <div class="section-heading">
+              <p class="lead">A hipnoterapia demonstrou ser eficaz para superar desafios como fobias, vícios e ansiedade, através de uma abordagem natural sem recurso a medicamentos. Cada sessão é personalizada de acordo com as necessidades individuais, promovendo melhorias no bem-estar mental e emocional. Esta técnica actua directamente no subconsciente, resultando em alterações profundas e duradouras.</p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <h2 class="heading-line">
+                <span class="d-block">Agora é a sua vez de</span>
+                <span class="fw-bold text-gradient text-gradient-success">transformar a sua vida</span>
+              </h2>
+            </div>
+
+            <div class="section-heading">
+              <p class="lead">Está pronto para libertar o seu potencial e alcançar a vida dos seus sonhos? Agende a sua consulta ainda hoje e dê o primeiro passo em direção à transformação.</p>
+              <p class="lead">Não permita que o passado determine o seu futuro - descubra o poder da hipnoterapia e liberte-se para viver uma vida plena e realizada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- BOTÓN FINAL -->
+
+    <div class="button-container">
+      <button class="btn btn-custom shadow-success" type="submit" data-loading-text="Sending...">
+          <span class="spinner spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+          <span class="text">Agende agora</span>
+      </button>
+    </div>
+
+    <!-- TESTIMONIALS -->
+
+    <section class="section block card">
+      <div class="container">
+        <div class="testimonials-slider">
+          <div class="swiper">
+            <div class="button-container">
+              <h2 class="heading-line">
+                <span class="d-block">Testemunhos</span>
+                <!-- <span class="fw-bold text-gradient text-gradient-success">transformar a sua vida</span> -->
+              </h2>
+            </div>
+
+            <!-- data-sw-autoplay="2500" data-sw-loop="true" -->
+            <div class="swiper-wrapper text-center w-50">
+
+
+
+              <!-- TESTIMONIAL 1 -->
+              <div class="swiper-slide">
+                <div class="d-flex flex-column align-items-center">
+                  <!-- <img src="../img/authors/avatar/1.jpg" alt="" class="rounded-circle shadow mb-4"> -->
+                  <p class="w-75 lead mt-3">O Ismael é uma pessoa 5*. Na primeira consulta senti logo melhoria, e sei que no decorrer das consultas irei me sentir muito melhor. Tem paciência, é bom ouvinte e ajuda muito com as suas palavras. Nunca pensei que este tipo de tratamento fosse tão eficaz e ajudasse tanto no nosso bem estar. Só tenho a agradecer ao Ismael.</p>
+                  <hr class="w-50">
+                  <footer>
+                    <cite class="fw-bold text-primary text-uppercase">JT</cite>
+                    <p class="small text-secondary mt-0">Paciente</p>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- TESTIMONIAL 2 -->
+
+              <div class="swiper-slide">
+                <div class="d-flex flex-column align-items-center">
+                  <!-- <img src="../img/authors/avatar/2.jpg" alt="" class="rounded-circle shadow mb-4"> -->
+                  <p class="w-75 lead mt-3">Um profissional que nasceu para ajudar. Não sou muito de sentir confiança em me abrir, em dizer o que sinto. O Ismael é uma pessoa com um poder incrível em observar e analisar cada problema dentro de cada pessoa. Transmites me uma segurança e uma paz. Um Amigo para toda vida.. Sempre disponível para ajudar. Obrigada por tudo. </p>
+                  <hr class="w-50">
+                  <footer>
+                    <cite class="fw-bold text-primary text-uppercase">Célia Pereira</cite>
+                    <p class="small text-secondary mt-0">Paciente</p>
+                  </footer>
+                </div>
+              </div>
+
+              <!-- TESTIMONIAL 3 -->
+
+              <div class="swiper-slide">
+                <div class="d-flex flex-column align-items-center">
+                  <!-- <img src="../img/authors/avatar/3.jpg" alt="" class="rounded-circle shadow mb-4"> -->
+                  <p class="w-75 lead mt-3">Obrigada Ismael por me estares a ajudar tanto. É um excelente profissional, compreensivo, paciente e é uma alavanca na minha vida. Ao fim de 4 sessões já não sei o que é ter uma crise de ansiedade, já consigo dormir de mente limpa, lido melhor com os desafios do dia a dia e consigo ser eu mesma em pleno. Recomendo vivamente!</p>
+                  <hr class="w-50">
+                  <footer>
+                    <cite class="fw-bold text-primary text-uppercase">Ana Teresa</cite>
+                    <p class="small text-secondary mt-0">Paciente</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button swiper-button-prev rounded-circle shadow p-2">
+            <i data-feather="arrow-left"></i>
+          </div>
+          <div class="swiper-button swiper-button-next rounded-circle shadow p-2">
+            <i data-feather="arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer class="site-footer section block card">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+          <nav class="nav flex-column">
+            <a class="nav-item nav-link">
+              <p><b>Endereço</b></p>
+              <p>Rua da Estrada Nacional</p>
+              <p>Edf Boavista, n192, Loja A R/C, Esq.</p>
+              <p>4520-124 Espargo, Santa Maria da Feira</p>
+              <p>Rua da Saudade, n13, 3830-596</p>
+              <p>Gafanha da Nazaré</p>
+            </a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center">
+          <nav class="nav flex-column">
+            <a class="nav-item nav-link">
+              <p><b>Entre em Contacto</b></p>
+              <p>+351 919313960</p>
+              <p>ismaelcosta-hipnose@gmail.com</p>
+            </a>
+          </nav>
+        </div>
+        <div class="col-md-4 text-center">
+          <nav class="nav flex-column">
+            <a class="nav-item nav-link">
+              <p><b>Protocolos</b></p>
+              <p>Medicare</p>
+              <p>Associação de Pessoas com Dor Crónica</p>
+              <p>SAMS Quadros</p>
+              <p>Serviços Sociais Culturais dos</p>
+              <p>Trabalhadores do Município de Ovar</p>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Back to top -->
+  <button class="btn btn-warning shadow-warning rounded-circle p-3 d-flex align-items-center justify-content-center scroll-to-top">
+    <i data-feather="chevron-up" width="18" height="18"></i>
+  </button>
+
+  <!--
+    Compiled js scripts.
+    We created and included a webpack configuration file you can compile the js.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <script src="js/dashcore.95cbb7260081cb946756.js" defer></script>
+  <script src="js/loading.b6bb5062cb3673f443b3.js" defer></script>
+<!-- 
+  <script src="js/dashcore.95cbb7260081cb946756.js"></script>
+  <script src="js/loading.b6bb5062cb3673f443b3.js"></script> -->
+</body>
+</html>

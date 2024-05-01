@@ -1,0 +1,1273 @@
+<!doctype html>
+
+<!-- Include a default theme value to start with the theme of your preference, dark|light are accepted -->
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8"> <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <!-- SEO -->
+  <meta name="description" content="DashCore Powerful Responsive SaaS, Startup &amp; Technology HTML Template">
+  <meta name="keywords" content="template, bootstrap, business, creative agency, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, touch, creative, babel, webpack">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="5studios">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+  <!-- Page loading styles. Should be included inline to avoid loading it externally -->
+  <style>
+    @keyframes spinner {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    .page-loading {
+      background-color: #fff;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: all .4s ease-in-out .2s;
+      visibility: hidden;
+      width: 100%;
+      z-index: 99999
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1
+    }
+
+    .page-loading-inner {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity .2s ease-in-out;
+      width: 100%
+    }
+
+    .page-loading-inner>span {
+      color: #9397ad;
+      display: block;
+      font-size: 1rem;
+      font-weight: 400
+    }
+
+    .page-spinner {
+      animation: spinner .75s linear infinite;
+      border: .15em solid #b4b7c9;
+      border-radius: 50%;
+      border-right-color: transparent;
+      display: inline-block;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      width: 2.75rem
+    }
+
+    [data-bs-theme=dark] .page-loading {
+      background-color: #0b0f19
+    }
+
+    [data-bs-theme=dark] .page-loading-inner>span {
+      color: #fff;
+      opacity: .6
+    }
+
+    [data-bs-theme=dark] .page-spinner {
+      border-color: hsla(0, 0%, 100%, .4) transparent hsla(0, 0%, 100%, .4) hsla(0, 0%, 100%, .4)
+    }
+  </style>
+  <link rel="icon" href="favicon.ico">
+  <title>DashCore - Powerful Responsive SaaS, Startup &amp; Technology HTML Template</title>
+
+  <!--
+    Compiled css styles.
+    We created and included a webpack configuration file you can compile the css.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <link rel="stylesheet" href="css/dashcore.41588051c3b03e83ed26.css">
+</head>
+
+<body> <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Page loading -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
+    </div>
+  </div>
+
+  <!-- Page Navbar -->
+  <nav class="st-nav navbar navbar-expand-lg fixed-top" id="main-nav">
+    <div class="container">
+      <ul class="st-nav-menu nav navbar-nav">
+        <li class="st-nav-section nav-item">
+          <a href="./" class="link-logo navbar-brand nav-link">
+            <img src="img/logo.svg" alt="" class="logo">
+          </a>
+        </li>
+
+        <!-- Primary navigation elements -->
+        <li class="st-nav-section st-nav-primary stick-right nav-item">
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="pages"> Pages </a>
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="blocks"> Blocks </a>
+          <a class="st-root-link item-company st-has-dropdown nav-link" data-dropdown="components"> UI Components </a>
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="landings"> Landings </a>
+        </li>
+
+        <!-- Secondary navigation elements -->
+        <li class="st-nav-section st-nav-secondary nav-item align-items-center">
+
+          <!-- Theme switcher -->
+          <div class="dropdown">
+            <button class="nav-link p-0 dropdown-toggle d-flex align-items-center" id="dc-theme" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+              <span class="theme-icon-active">
+                <i class="theme-icon" data-feather="circle" width="18" height="18"></i>
+              </span>
+              <span class="d-lg-none ms-2" id="dc-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dc-theme-text">
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="moon" width="18" height="18"></i> Dark
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="sun" width="18" height="18"></i> Light
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="circle" width="18" height="18"></i> Auto
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Navigation buttons -->
+          <a class="btn btn-primary shadow-primary" href="auth/login.html" target="_blank">
+            <i class="fas fa-sign-in-alt d-none d-md-inline me-md-0 me-lg-2"></i>
+            <span class="d-md-none d-lg-inline">Login</span>
+          </a>
+        </li>
+
+        <!-- Mobile navigation modal -->
+        <li class="st-nav-section st-nav-mobile nav-item">
+          <button class="st-root-link navbar-toggler" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="st-popup">
+            <div class="st-popup-container bg-body-tertiary">
+              <a class="st-popup-close-button">Close</a>
+              <div class="st-dropdown-content-group">
+                <h4 class="text-uppercase">Pages</h4>
+                <a class="text-primary" href="about.html">
+                  <i class="far fa-building icon"></i> About
+                </a>
+                <a class="text-success" href="contact.html">
+                  <i class="far fa-envelope icon"></i> Contact
+                </a>
+                <a class="text-warning" href="pricing.html">
+                  <i class="fas fa-hand-holding-usd icon"></i> Pricing
+                </a>
+                <a class="text-info" href="faqs.html">
+                  <i class="far fa-question-circle icon"></i> FAQs
+                </a>
+              </div>
+              <div class="st-dropdown-content-group border-top">
+                <h4 class="text-uppercase fw-bold">Components</h4>
+                <div class="row">
+                  <div class="col me-4">
+                    <a href="components/alert.html">Alerts</a>
+                    <a href="components/badge.html">Badges</a>
+                    <a href="components/button.html">Buttons</a>
+                    <a href="components/color.html">Colors</a>
+                    <a href="components/accordion.html">Accordion</a>
+                  </div>
+                  <div class="col me-4">
+                    <a href="components/overlay.html">Overlay</a>
+                    <a href="components/progress.html">Progress</a>
+                    <a href="components/lightbox.html">Lightbox</a>
+                    <a href="components/tab.html">Tabs</a>
+                    <a href="components/tables.html">Tables</a>
+                    <a href="components/typography.html">Typography</a>
+                  </div>
+                </div>
+              </div>
+              <div class="st-dropdown-content-group border-top">
+                <a href="auth/login.html">Sign in <i class="fas fa-long-arrow-right ms-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="st-dropdown-root">
+      <div class="st-dropdown-bg">
+        <div class="st-alt-bg"></div>
+      </div>
+      <div class="st-dropdown-arrow"></div>
+      <div class="st-dropdown-container">
+        <div class="st-dropdown-section" data-dropdown="pages">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="mb-4">
+                <h4 class="text-nowrap mb-0 text-gradient text-gradient-success">
+                  <span class="fw-bold">Useful pages</span> you'll need
+                </h4>
+                <p class="text-muted mt-0">Get a complete design stack</p>
+              </div>
+              <div class="row flex-nowrap g-4">
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">Error</h6>
+                  <a class="dropdown-item" href="403.html">403 Error</a>
+                  <a class="dropdown-item" href="404.html">404 Error</a>
+                  <a class="dropdown-item" href="500.html">500 Error</a>
+                </div>
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">User</h6>
+                  <a class="dropdown-item" href="auth/login.html">Login</a>
+                  <a class="dropdown-item" href="auth/register.html">Register</a>
+                  <a class="dropdown-item" href="auth/forgot-password.html">Forgot</a>
+                </div>
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">Extra</h6>
+                  <a class="dropdown-item" href="pricing.html">Pricing</a>
+                  <a class="dropdown-item" href="terms.html">Terms</a>
+                  <a class="dropdown-item" href="faqs.html">FAQ</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <a class="dropdown-item fw-bold" href="about.html">
+                    <i class="far fa-building icon"></i> About
+                  </a>
+                  <a class="dropdown-item fw-bold" href="contact.html">
+                    <i class="far fa-envelope icon"></i> Contact
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a class="dropdown-item fw-bold" href="pricing.html">
+                    <i class="fa fa-money-bills icon"></i> Pricing
+                  </a>
+                  <a class="dropdown-item fw-bold" href="pricing-table.html">
+                    <i class="fas fa-hand-holding-usd icon"></i> Pricing Table
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="blocks">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="row flex-nowrap flex-nowrap g-4">
+                <div class="col me-4">
+                  <a class="dropdown-item" href="blocks/call-to-action.html">Call to actions</a>
+                  <a class="dropdown-item" href="blocks/contact.html">Contact</a>
+                  <a class="dropdown-item" href="blocks/counter.html">Counters</a>
+                  <a class="dropdown-item" href="blocks/faqs.html">FAQs</a>
+                </div>
+                <div class="col me-4">
+                  <a class="dropdown-item" href="blocks/footer.html">Footers</a>
+                  <a class="dropdown-item" href="blocks/form.html">Forms</a>
+                  <a class="dropdown-item" href="blocks/navbar.html">Navbar</a>
+                  <a class="dropdown-item" href="blocks/navigation.html">Navigation</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="blocks/pricing.html">Pricing</a>
+                  <a class="dropdown-item" href="blocks/slider.html">Sliders</a>
+                  <a class="dropdown-item" href="blocks/team.html">Team</a>
+                  <a class="dropdown-item" href="blocks/testimonial.html">Testimonials</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <h6 class="link-title text-uppercase">
+                <i class="fas fa-long-arrow-right me-3"></i> Coming soon
+              </h6>
+              <div class="ms-5">
+                <span class="dropdown-item text-muted">Dividers</span>
+                <span class="dropdown-item text-muted">Gallery</span>
+                <span class="dropdown-item text-muted">Screenshots</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="components">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <a class="dropdown-item mb-4" href="components/accordion.html">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="bg-warning-subtle text-warning p-3 rounded-2 me-lg-3 me-md-auto">
+                    <i data-feather="align-justify" width="24" height="24" class="stroke-warning"></i>
+                  </div>
+                  <div>
+                    <h5 class="link-title m-0">Accordion</h5>
+                    <p class="m-0 text-muted">Useful accordion elements</p>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item mb-4" href="components/color.html">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-2 me-lg-3 me-md-auto">
+                    <i data-feather="image" width="24" height="24" class="stroke-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="link-title m-0">Colors</h5>
+                    <p class="m-0 text-muted">Get to know DashCore color options</p>
+                  </div>
+                </div>
+              </a>
+              <h6 class="text-uppercase fw-bold small">Huge components list</h6>
+              <div class="row flex-nowrap">
+                <div class="col">
+                  <a class="dropdown-item" href="components/alert.html">Alerts</a>
+                  <a class="dropdown-item" href="components/badge.html">Badges</a>
+                  <a class="dropdown-item" href="components/button.html">Buttons</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="components/overlay.html">Overlay</a>
+                  <a class="dropdown-item" href="components/progress.html">Progress</a>
+                  <a class="dropdown-item" href="components/lightbox.html">Lightbox</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="components/tab.html">Tabs</a>
+                  <a class="dropdown-item" href="components/tables.html">Tables</a>
+                  <a class="dropdown-item" href="components/typography.html">Typography</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <span class="dropdown-item d-flex align-items-center text-muted"> Wizard <i class="fas fa-ban ms-auto"></i>
+              </span>
+              <span class="dropdown-item d-flex align-items-center text-muted"> Timeline <i class="fas fa-ban ms-auto"></i>
+              </span>
+              <span class="dropdown-item d-flex align-items-center text-muted"> Process <i class="fas fa-ban ms-auto"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="landings">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="content" style="max-width:720px">
+                <div class="row">
+                  <div class="col-md-4 d-flex flex-column">
+                    <h4 class="fw-bold text-gradient text-gradient-success m-0">Beautiful <span class="d-block">Landing Pages</span>
+                    </h4>
+                    <p class="m-0 text-muted">Carefully designed Landing Pages</p>
+                    <div class="position-relative mt-auto d-flex justify-content-end">
+                      <div class="swiper-button sw-nav sw-nav-prev rounded-circle shadow p-2 me-3">
+                        <i data-feather="arrow-left"></i>
+                      </div>
+                      <div class="swiper-button sw-nav sw-nav-next rounded-circle shadow p-2">
+                        <i data-feather="arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="swiper" data-sw-loop="true" data-sw-nav-arrows=".sw-nav" data-sw-allow-move="false">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="app-landing.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/01-app-landing.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="app-landing-2.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/02-app-landing-2.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="business.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/03-business.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="corporate.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/04-corporate.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="developers.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/05-developers.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="integration.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/06-integration.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="marketing.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/07-marketing.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="online-payments.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/08-online-payments.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="payment-services.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/09-payment-services.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="saas.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/10-saas.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="smart-business.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/11-smart-business.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="startup.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/12-startup.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">Blog Pages</p>
+                  <a class="dropdown-item fw-bold" href="blog/list-view.html">
+                    <i class="fa fa-list me-2"></i> List View
+                  </a>
+                  <a class="dropdown-item fw-bold" href="blog/">
+                    <i class="fa fa-table-cells me-2"></i> Grid View
+                  </a>
+                  <a class="dropdown-item fw-bold" href="blog/grid-view-2.html">
+                    <i class="fa fa-table-cells-large me-2"></i> Grid View 2
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">With Sidebar</p>
+                  <a class="dropdown-item fw-bold" href="blog/list-sidebar.html"> List View with Sidebar </a>
+                  <a class="dropdown-item fw-bold" href="blog/grid-sidebar.html"> Grid View with Sidebar </a>
+                  <a class="dropdown-item fw-bold" href="blog/post-sidebar.html"> Single Post with Sidebar </a>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">Other Pages</p>
+                  <a class="dropdown-item fw-bold" href="blog/post.html"> Single Post </a>
+                  <a class="dropdown-item fw-bold" href="blog/category.html"> Categories </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content, everything should be placed inside this main tag but the nav and footer -->
+  <main class="position-relative overflow-hidden">
+
+    <!-- ./Page header -->
+    <header class="section header smart-business-header header-includes-carousel bg-body-secondary">
+      <div class="shapes-container">
+        <div class="shape background-shape background-shape-top center-xy"></div>
+
+        <!-- main shape -->
+        <div class="shape background-shape background-shape-main"></div>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-7">
+            <p class="d-inline-block text-primary-emphasis bg-primary-subtle rounded-pill px-3 py-1 fw-bold mb-2"> innovative solutions for the demanding customer </p>
+            <h1 class="fw-bold display-md-3 text-gradient text-gradient-primary">
+              <span class="d-block fw-bolder">DashCore</span> Smart business
+            </h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolore excepturi explicabo, harum in laudantium nulla officiis reprehenderit!</p>
+            <nav class="nav mt-5">
+              <a href="#" class="me-3 btn btn-info shadow-info">
+                <i class="fas fa-tag me-3"></i> Plans & pricing
+              </a>
+              <a href="#" class="btn btn-primary shadow-primary">Start now</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wrapper mx-md-auto">
+        <div data-aos="fade-left" data-aos-delay="300">
+          <img src="img/smart-business/header/main-shape.svg" class="img-responsive main-shape" alt="">
+          <img src="img/smart-business/header/anim-1.svg" class="anim anim-1 floating" alt="">
+          <img src="img/smart-business/header/anim-1.svg" class="anim anim-2 floating" alt="">
+          <img src="img/smart-business/header/anim-1.svg" class="anim anim-3 floating" alt="">
+        </div>
+      </div>
+    </header>
+
+    <!-- ./Logos Section -->
+    <section class="section bg-body-secondary border-bottom features-carousel">
+      <div class="container pt-0">
+        <div class="swiper py-2 px-1" data-sw-autoplay="3500" data-sw-loop="true" data-sw-show-items="1" data-sw-space-between="20" data-sw-breakpoints="{&quot;768&quot;: {&quot;slidesPerView&quot;: 3}, &quot;992&quot;: {&quot;slidesPerView&quot;: 4}}">
+          <div class="swiper-wrapper px-1">
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/1.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Social Integration</p>
+                  <p class="fw-normal small text-secondary">Consequuntur ea sapiente ut</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/2.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Design Strategy</p>
+                  <p class="fw-normal small text-secondary">Alias eum expedita illo rem!</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/3.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Save Money</p>
+                  <p class="fw-normal small text-secondary">Consectetur adipisicing elit</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/4.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Business Brain</p>
+                  <p class="fw-normal small text-secondary">Rem repellendus rerum, vel!</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/5.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Worldwide Support</p>
+                  <p class="fw-normal small text-secondary">Consectetur adipisicing elit</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/6.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Social Settings</p>
+                  <p class="fw-normal small text-secondary">Facilis numquam odio sit amet.</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-2 px-sm-1">
+              <div class="card shadow-box">
+                <div class="card-body">
+                  <div class="my-3">
+                    <img src="img/automate-marketing/icons/7.svg" class="logo img-responsive" alt="">
+                  </div>
+                  <hr class="w-50 my-3">
+                  <p class="fw-bold mt-4 mb-0">Insightful Statistics</p>
+                  <p class="fw-normal small text-secondary">facere quasi rem suscipit!</p>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                  <div>
+                    <p class="text-muted lead fw-bold mb-0">1.5K</p>
+                    <p class="text-secondary-emphasis small my-0">New Subscribers</p>
+                  </div>
+                  <a href="javascript:;">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Why Us -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <p class="text-primary fw-bold small text-uppercase">some reasons</p>
+              <h2 class="fw-bold">Why Choose DashCore?</h2>
+            </div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, architecto asperiores dignissimos doloribus dolorum eos esse eum laborum minima molestias, natus nostrum odio quia recusandae rem sequi similique velit. </p>
+            <a href="javascript:;" class="btn btn-primary shadow-primary mt-4">Read More</a>
+          </div>
+          <div class="col-md-6">
+            <div class="animate-bars">
+              <ul class="progress-bars whyus-progress-bars"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container pt-3">
+        <div class="row g-4">
+          <div class="col-6 col-xs-4 col-md-3 text-center text-md-start">
+            <i data-feather="box" width="36" height="36" class="stroke-success mb-2"></i>
+            <h3 class="counter fw-bold fs-3 mb-1">273</h3>
+            <p class="text-muted m-0">Components</p>
+          </div>
+          <div class="col-6 col-xs-4 col-md-3 text-center text-md-start">
+            <i data-feather="download-cloud" width="36" height="36" class="stroke-success mb-2"></i>
+            <h3 class="counter fw-bold fs-3 mb-1">654</h3>
+            <p class="text-muted m-0">Downloads</p>
+          </div>
+          <div class="col-6 col-xs-4 col-md-3 text-center text-md-start">
+            <i data-feather="settings" width="36" height="36" class="stroke-success mb-2"></i>
+            <h3 class="counter fw-bold fs-3 mb-1">7941</h3>
+            <p class="text-muted m-0">Followers</p>
+          </div>
+          <div class="col-6 col-xs-4 col-md-3 text-center text-md-start">
+            <i data-feather="award" width="36" height="36" class="stroke-success mb-2"></i>
+            <h3 class="counter fw-bold fs-3 mb-1">654</h3>
+            <p class="text-muted m-0">New users</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Curve Divider -->
+    <div class="position-relative ">
+      <div class="shape-divider shape-divider-bottom shape-divider-curve shape-divider-fluid-x text-primary">
+        <svg viewBox="0 0 2880 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- You deserve better -->
+    <section class="section bg-primary">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2 class="fw-bold text-light">You deserve better</h2>
+          <p class="lead text-light">With DashCore you will not only get a beautiful HTML template tou showoff your web, but a complete starter kit to bring your application to life right away</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Powerful Tools -->
+    <section class="section">
+      <div class="container pt-0 mt-n7">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card shadow p-4 hover-lift">
+              <div class="card-body">
+                <div class="bg-primary-subtle text-primary p-3 rounded-2 d-inline-block mb-4">
+                  <i data-feather="send" width="36" height="36" class="stroke-primary"></i>
+                </div>
+                <h5 class="fw-bold text-capitalize mb-3">easy to integrate</h5>
+                <p class="text-muted mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-4 hover-lift">
+              <div class="card-body">
+                <div class="bg-success-subtle text-success p-3 rounded-2 d-inline-block mb-4">
+                  <i data-feather="heart" width="36" height="36" class="stroke-success"></i>
+                </div>
+                <h5 class="fw-bold text-capitalize mb-3">seamlessly solution</h5>
+                <p class="text-muted mb-0">Ut enim ad minima veniam, quis nostrum voluptatem accusantium ullam corporis obcaecati optio quasi qui.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Logos Section -->
+    <section class="section">
+      <div class="container pt-4">
+        <div class="swiper" data-sw-show-items="5" data-sw-space-between="30" data-sw-autoplay="2500" data-sw-loop="true">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="img/logos/1.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/2.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/3.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/4.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/5.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/1.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/2.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/3.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/4.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/5.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Extend DashCore Section -->
+    <section class="section extend-core border-top bg-body-secondary edge bottom-right">
+      <div class="shapes-container">
+        <div class="shape shape-circle">
+          <div></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 text-center text-lg-start">
+            <div class="section-heading">
+              <p class="text-gradient fw-bold mb-2 small text-uppercase text-gradient-warning mb-3"> enterprise integration </p>
+              <h2 class="section-title fw-bold"> Extend DashCore </h2>
+              <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsum iste iure nihil non obcaecati quasi, sit? Aperiam asperiores atque, commodi debitis fugiat in nemo optio sint velit. Pariatur, sint! </p>
+            </div>
+            <a href="#" class="btn btn-warning shadow-warning">Know More</a>
+            <a href="#" class="btn btn-primary shadow-primary">Register Account</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="icons-wrapper position-relative">
+              <div class="floating icon icon-xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:100%;top:30%" data-aos="fade-left">
+                <img src="img/integration/blossom.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:60%;top:-10%" data-aos="fade-left">
+                <img src="img/integration/dockbit.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:25%;top:0" data-aos="fade-left">
+                <img src="img/integration/zapier.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-2xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:0;top:50%" data-aos="fade-left">
+                <img src="img/integration/bitnami.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-2xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:23%;top:70%" data-aos="fade-left">
+                <img src="img/integration/slack.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:65%;top:44%" data-aos="fade-left">
+                <img src="img/integration/monero.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:95%;top:83%" data-aos="fade-left">
+                <img src="img/integration/dropbox.svg" class="img-responsive" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Testimonials -->
+    <section class="section singl-testimonial">
+      <div class="container pt-8 bring-to-front">
+        <div class="swiper pb-0 pb-lg-8" data-sw-nav-arrows=".reviews-nav">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/1.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Arianna Rivera,</span> Web Developer
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/2.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Audrey Meyer,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/3.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Connie Rhodes,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/4.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Isabella Lucas,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/5.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Kathryn Reyes,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/6.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Peyton Jimenez,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <figure class="testimonial-img ms-md-auto">
+                    <img src="img/authors/reviews/7.jpg" class="img-responsive rounded shadow-lg" alt="...">
+                  </figure>
+                </div>
+                <div class="col-lg-6 ms-md-auto">
+                  <div class="user-review text-center italic bg-primary text-light rounded shadow-lg py-5 px-4 px-lg-6">
+                    <blockquote class="py-4">
+                      <i class="fas fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem. <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <div class="author mt-4">
+                      <p class="small">
+                        <span class="fw-bold text-light">Ruby Peterson,</span> Marketing Director
+                      </p>
+                      <img src="img/authors/signature.svg" class="img-responsive signature mx-auto" alt="...">
+                    </div>
+                    <div class="shape-wrapper" data-aos="fade-up">
+                      <svg class="svg-review-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#4f2ca9" />
+                      </svg>
+                      <svg class="svg-review-bottom back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#8053ff" />
+                      </svg>
+                      <svg class="svg-review-bottom back left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M95 0Q90 90 0 100h100V0z" fill="#3f179a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="reviews-navigation">
+            <div class="reviews-nav reviews-nav-prev btn btn-darker shadow-darker btn-sm">
+              <i class="reviews-nav-icon fas fa-long-arrow-left"></i>
+            </div>
+            <div class="reviews-nav reviews-nav-next btn btn-darker shadow-dark btn-sm">
+              <i class="reviews-nav-icon fas fa-long-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./CTA - Buy it now Section -->
+    <section class="section border-bottom bg-body-secondary edge top-left">
+      <div class="container">
+        <div class="d-flex align-items-center flex-column flex-md-row">
+          <div class="text-center text-md-start">
+            <p class="text-gradient text-gradient-primary mb-0 lead fw-bold">Ready to get started?</p>
+            <h2 class="mt-0 fw-bold">Create an account now</h2>
+          </div>
+          <a href="srv/register" class="btn btn-primary shadow-primary mt-3 mt-md-0 ms-md-auto"> Create DashCore account </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Page footer -->
+
+  <!-- ./Footer - Headline -->
+  <footer class="section text-center ">
+    <div class="container pb-4">
+      <a href="./" class="link-logo">
+        <img src="img/logo.svg" alt="" class="logo">
+      </a>
+      <p class="lead mt-5">Don't wait - <span class="bold">Get DashCore</span> NOW!</p>
+      <p class="copyright my-4 pb-4"> © 2024 DashCore, <em>by</em>
+        <a class="brand bold" href="https://5studios.net" target="_blank">5studios.net</a>
+      </p>
+      <nav class="nav social-icons justify-content-center mt-4">
+        <a href="#" class="btn btn-sm btn-facebook me-3">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="btn btn-sm btn-twitter text-white  me-3">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="btn btn-sm btn-whatsapp me-3">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="btn btn-sm btn-instagram text-white  me-3">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning shadow-warning rounded-circle p-3 d-flex align-items-center justify-content-center scroll-to-top">
+    <i data-feather="chevron-up" width="18" height="18"></i>
+  </button>
+
+  <!--
+    Compiled js scripts.
+    We created and included a webpack configuration file you can compile the js.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <script src="js/dashcore.95cbb7260081cb946756.js"></script>
+  <script src="js/loading.b6bb5062cb3673f443b3.js"></script>
+</body>
+</html>

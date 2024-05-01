@@ -1,0 +1,1341 @@
+<!doctype html>
+
+<!-- Include a default theme value to start with the theme of your preference, dark|light are accepted -->
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8"> <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+  <!-- SEO -->
+  <meta name="description" content="DashCore Powerful Responsive SaaS, Startup &amp; Technology HTML Template">
+  <meta name="keywords" content="template, bootstrap, business, creative agency, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, touch, creative, babel, webpack">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="5studios">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+  <!-- Page loading styles. Should be included inline to avoid loading it externally -->
+  <style>
+    @keyframes spinner {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    .page-loading {
+      background-color: #fff;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: all .4s ease-in-out .2s;
+      visibility: hidden;
+      width: 100%;
+      z-index: 99999
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1
+    }
+
+    .page-loading-inner {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity .2s ease-in-out;
+      width: 100%
+    }
+
+    .page-loading-inner>span {
+      color: #9397ad;
+      display: block;
+      font-size: 1rem;
+      font-weight: 400
+    }
+
+    .page-spinner {
+      animation: spinner .75s linear infinite;
+      border: .15em solid #b4b7c9;
+      border-radius: 50%;
+      border-right-color: transparent;
+      display: inline-block;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      width: 2.75rem
+    }
+
+    [data-bs-theme=dark] .page-loading {
+      background-color: #0b0f19
+    }
+
+    [data-bs-theme=dark] .page-loading-inner>span {
+      color: #fff;
+      opacity: .6
+    }
+
+    [data-bs-theme=dark] .page-spinner {
+      border-color: hsla(0, 0%, 100%, .4) transparent hsla(0, 0%, 100%, .4) hsla(0, 0%, 100%, .4)
+    }
+  </style>
+  <link rel="icon" href="favicon.ico">
+  <title>DashCore - Powerful Responsive SaaS, Startup &amp; Technology HTML Template</title>
+
+  <!--
+    Compiled css styles.
+    We created and included a webpack configuration file you can compile the css.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <link rel="stylesheet" href="css/dashcore.41588051c3b03e83ed26.css">
+</head>
+
+<body> <!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Page loading -->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div>
+      <span>Loading...</span>
+    </div>
+  </div>
+
+  <!-- Page Navbar -->
+  <nav class="st-nav navbar navbar-expand-lg fixed-top dark-link" id="main-nav">
+    <div class="container">
+      <ul class="st-nav-menu nav navbar-nav">
+        <li class="st-nav-section nav-item">
+          <a href="./" class="link-logo navbar-brand nav-link">
+            <img src="img/logo.svg" alt="" class="logo">
+          </a>
+        </li>
+
+        <!-- Primary navigation elements -->
+        <li class="st-nav-section st-nav-primary  nav-item">
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="pages"> Pages </a>
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="blocks"> Blocks </a>
+          <a class="st-root-link item-company st-has-dropdown nav-link" data-dropdown="components"> UI Components </a>
+          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="landings"> Landings </a>
+        </li>
+
+        <!-- Secondary navigation elements -->
+        <li class="st-nav-section st-nav-secondary nav-item align-items-center">
+
+          <!-- Theme switcher -->
+          <div class="dropdown">
+            <button class="nav-link p-0 dropdown-toggle d-flex align-items-center" id="dc-theme" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+              <span class="theme-icon-active">
+                <i class="theme-icon" data-feather="circle" width="18" height="18"></i>
+              </span>
+              <span class="d-lg-none ms-2" id="dc-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dc-theme-text">
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="moon" width="18" height="18"></i> Dark
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="sun" width="18" height="18"></i> Light
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                  <i class="theme-icon me-2" data-feather="circle" width="18" height="18"></i> Auto
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Navigation buttons -->
+          <a class="btn btn-primary shadow-primary" href="auth/login.html" target="_blank">
+            <i class="fas fa-sign-in-alt d-none d-md-inline me-md-0 me-lg-2"></i>
+            <span class="d-md-none d-lg-inline">Login</span>
+          </a>
+        </li>
+
+        <!-- Mobile navigation modal -->
+        <li class="st-nav-section st-nav-mobile nav-item">
+          <button class="st-root-link navbar-toggler" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="st-popup">
+            <div class="st-popup-container bg-body-tertiary">
+              <a class="st-popup-close-button">Close</a>
+              <div class="st-dropdown-content-group">
+                <h4 class="text-uppercase">Pages</h4>
+                <a class="text-primary" href="about.html">
+                  <i class="far fa-building icon"></i> About
+                </a>
+                <a class="text-success" href="contact.html">
+                  <i class="far fa-envelope icon"></i> Contact
+                </a>
+                <a class="text-warning" href="pricing.html">
+                  <i class="fas fa-hand-holding-usd icon"></i> Pricing
+                </a>
+                <a class="text-info" href="faqs.html">
+                  <i class="far fa-question-circle icon"></i> FAQs
+                </a>
+              </div>
+              <div class="st-dropdown-content-group border-top">
+                <h4 class="text-uppercase fw-bold">Components</h4>
+                <div class="row">
+                  <div class="col me-4">
+                    <a href="components/alert.html">Alerts</a>
+                    <a href="components/badge.html">Badges</a>
+                    <a href="components/button.html">Buttons</a>
+                    <a href="components/color.html">Colors</a>
+                    <a href="components/accordion.html">Accordion</a>
+                  </div>
+                  <div class="col me-4">
+                    <a href="components/overlay.html">Overlay</a>
+                    <a href="components/progress.html">Progress</a>
+                    <a href="components/lightbox.html">Lightbox</a>
+                    <a href="components/tab.html">Tabs</a>
+                    <a href="components/tables.html">Tables</a>
+                    <a href="components/typography.html">Typography</a>
+                  </div>
+                </div>
+              </div>
+              <div class="st-dropdown-content-group border-top">
+                <a href="auth/login.html">Sign in <i class="fas fa-long-arrow-right ms-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="st-dropdown-root">
+      <div class="st-dropdown-bg">
+        <div class="st-alt-bg"></div>
+      </div>
+      <div class="st-dropdown-arrow"></div>
+      <div class="st-dropdown-container">
+        <div class="st-dropdown-section" data-dropdown="pages">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="mb-4">
+                <h4 class="text-nowrap mb-0 text-gradient text-gradient-success">
+                  <span class="fw-bold">Useful pages</span> you'll need
+                </h4>
+                <p class="text-muted mt-0">Get a complete design stack</p>
+              </div>
+              <div class="row flex-nowrap g-4">
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">Error</h6>
+                  <a class="dropdown-item" href="403.html">403 Error</a>
+                  <a class="dropdown-item" href="404.html">404 Error</a>
+                  <a class="dropdown-item" href="500.html">500 Error</a>
+                </div>
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">User</h6>
+                  <a class="dropdown-item" href="auth/login.html">Login</a>
+                  <a class="dropdown-item" href="auth/register.html">Register</a>
+                  <a class="dropdown-item" href="auth/forgot-password.html">Forgot</a>
+                </div>
+                <div class="col me-4">
+                  <h6 class="text-uppercase fw-bold small ps-2">Extra</h6>
+                  <a class="dropdown-item" href="pricing.html">Pricing</a>
+                  <a class="dropdown-item" href="terms.html">Terms</a>
+                  <a class="dropdown-item" href="faqs.html">FAQ</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <a class="dropdown-item fw-bold" href="about.html">
+                    <i class="far fa-building icon"></i> About
+                  </a>
+                  <a class="dropdown-item fw-bold" href="contact.html">
+                    <i class="far fa-envelope icon"></i> Contact
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a class="dropdown-item fw-bold" href="pricing.html">
+                    <i class="fa fa-money-bills icon"></i> Pricing
+                  </a>
+                  <a class="dropdown-item fw-bold" href="pricing-table.html">
+                    <i class="fas fa-hand-holding-usd icon"></i> Pricing Table
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="blocks">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="row flex-nowrap flex-nowrap g-4">
+                <div class="col me-4">
+                  <a class="dropdown-item" href="blocks/call-to-action.html">Call to actions</a>
+                  <a class="dropdown-item" href="blocks/contact.html">Contact</a>
+                  <a class="dropdown-item" href="blocks/counter.html">Counters</a>
+                  <a class="dropdown-item" href="blocks/faqs.html">FAQs</a>
+                </div>
+                <div class="col me-4">
+                  <a class="dropdown-item" href="blocks/footer.html">Footers</a>
+                  <a class="dropdown-item" href="blocks/form.html">Forms</a>
+                  <a class="dropdown-item" href="blocks/navbar.html">Navbar</a>
+                  <a class="dropdown-item" href="blocks/navigation.html">Navigation</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="blocks/pricing.html">Pricing</a>
+                  <a class="dropdown-item" href="blocks/slider.html">Sliders</a>
+                  <a class="dropdown-item" href="blocks/team.html">Team</a>
+                  <a class="dropdown-item" href="blocks/testimonial.html">Testimonials</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <h6 class="link-title text-uppercase">
+                <i class="fas fa-long-arrow-right me-3"></i> Coming soon
+              </h6>
+              <div class="ms-5">
+                <span class="dropdown-item text-muted">Dividers</span>
+                <span class="dropdown-item text-muted">Gallery</span>
+                <span class="dropdown-item text-muted">Screenshots</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="components">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <a class="dropdown-item mb-4" href="components/accordion.html">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="bg-warning-subtle text-warning p-3 rounded-2 me-lg-3 me-md-auto">
+                    <i data-feather="align-justify" width="24" height="24" class="stroke-warning"></i>
+                  </div>
+                  <div>
+                    <h5 class="link-title m-0">Accordion</h5>
+                    <p class="m-0 text-muted">Useful accordion elements</p>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item mb-4" href="components/color.html">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-2 me-lg-3 me-md-auto">
+                    <i data-feather="image" width="24" height="24" class="stroke-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="link-title m-0">Colors</h5>
+                    <p class="m-0 text-muted">Get to know DashCore color options</p>
+                  </div>
+                </div>
+              </a>
+              <h6 class="text-uppercase fw-bold small">Huge components list</h6>
+              <div class="row flex-nowrap">
+                <div class="col">
+                  <a class="dropdown-item" href="components/alert.html">Alerts</a>
+                  <a class="dropdown-item" href="components/badge.html">Badges</a>
+                  <a class="dropdown-item" href="components/button.html">Buttons</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="components/overlay.html">Overlay</a>
+                  <a class="dropdown-item" href="components/progress.html">Progress</a>
+                  <a class="dropdown-item" href="components/lightbox.html">Lightbox</a>
+                </div>
+                <div class="col">
+                  <a class="dropdown-item" href="components/tab.html">Tabs</a>
+                  <a class="dropdown-item" href="components/tables.html">Tables</a>
+                  <a class="dropdown-item" href="components/typography.html">Typography</a>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <span class="dropdown-item d-flex align-items-center text-muted"> Wizard <i class="fas fa-ban ms-auto"></i>
+              </span>
+              <span class="dropdown-item d-flex align-items-center text-muted"> Timeline <i class="fas fa-ban ms-auto"></i>
+              </span>
+              <span class="dropdown-item d-flex align-items-center text-muted"> Process <i class="fas fa-ban ms-auto"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="st-dropdown-section" data-dropdown="landings">
+          <div class="st-dropdown-content">
+            <div class="st-dropdown-content-group">
+              <div class="content" style="max-width:720px">
+                <div class="row">
+                  <div class="col-md-4 d-flex flex-column">
+                    <h4 class="fw-bold text-gradient text-gradient-success m-0">Beautiful <span class="d-block">Landing Pages</span>
+                    </h4>
+                    <p class="m-0 text-muted">Carefully designed Landing Pages</p>
+                    <div class="position-relative mt-auto d-flex justify-content-end">
+                      <div class="swiper-button sw-nav sw-nav-prev rounded-circle shadow p-2 me-3">
+                        <i data-feather="arrow-left"></i>
+                      </div>
+                      <div class="swiper-button sw-nav sw-nav-next rounded-circle shadow p-2">
+                        <i data-feather="arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="swiper" data-sw-loop="true" data-sw-nav-arrows=".sw-nav" data-sw-allow-move="false">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a href="app-landing.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/01-app-landing.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="app-landing-2.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/02-app-landing-2.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="business.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/03-business.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="corporate.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/04-corporate.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="developers.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/05-developers.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="integration.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/06-integration.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="marketing.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/07-marketing.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="online-payments.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/08-online-payments.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="payment-services.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/09-payment-services.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="saas.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/10-saas.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="smart-business.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/11-smart-business.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a href="startup.html">
+                            <div class="card shadow border-0 overflow-hidden">
+                              <figure class="preview-overlay m-0">
+                                <div class="preview-pane">
+                                  <div class="preview-page" data-simplebar="">
+                                    <img class="card-img-bottom img-responsive" src="img/demo/screen/12-startup.png" alt="">
+                                  </div>
+                                </div>
+                              </figure>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="st-dropdown-content-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">Blog Pages</p>
+                  <a class="dropdown-item fw-bold" href="blog/list-view.html">
+                    <i class="fa fa-list me-2"></i> List View
+                  </a>
+                  <a class="dropdown-item fw-bold" href="blog/">
+                    <i class="fa fa-table-cells me-2"></i> Grid View
+                  </a>
+                  <a class="dropdown-item fw-bold" href="blog/grid-view-2.html">
+                    <i class="fa fa-table-cells-large me-2"></i> Grid View 2
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">With Sidebar</p>
+                  <a class="dropdown-item fw-bold" href="blog/list-sidebar.html"> List View with Sidebar </a>
+                  <a class="dropdown-item fw-bold" href="blog/grid-sidebar.html"> Grid View with Sidebar </a>
+                  <a class="dropdown-item fw-bold" href="blog/post-sidebar.html"> Single Post with Sidebar </a>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-uppercase ps-2 fw-bold text-gradient text-gradient-primary">Other Pages</p>
+                  <a class="dropdown-item fw-bold" href="blog/post.html"> Single Post </a>
+                  <a class="dropdown-item fw-bold" href="blog/category.html"> Categories </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content, everything should be placed inside this main tag but the nav and footer -->
+  <main class="position-relative overflow-hidden">
+
+    <!-- Integration Heading -->
+    <header class="header section integrations-header">
+      <div class="shapes-container">
+        <div class="shape shape-circle shape-circle-1" data-aos="fade-down" data-aos-delay="200">
+          <div></div>
+        </div>
+        <div class="shape shape-circle shape-circle-2" data-aos="zoom-in" data-aos-delay="300">
+          <div></div>
+        </div>
+        <div class="shape shape-square shape-square-1" data-aos="flip-right" data-aos-delay="400">
+          <div></div>
+        </div>
+        <div class="shape shape-square shape-square-2" data-aos="flip-left" data-aos-delay="400">
+          <div></div>
+        </div>
+        <div class="shape shape-square shape-square-3" data-aos="flip-left" data-aos-delay="200">
+          <div></div>
+        </div>
+        <div class="shape shape-ring shape-ring-1">
+          <div></div>
+        </div>
+        <div class="shape shape-ring shape-ring-2">
+          <div></div>
+        </div>
+        <div class="shape pattern pattern-dots">
+          <div></div>
+        </div>
+        <div class="static-shape background-shape background-shape-main"></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 mx-auto text-center">
+            <h1 class="fw-bold text-gradient text-gradient-primary mb-4">DashCore fully integrates with multiple tools, it will make your customization experience a breeze</h1>
+            <p class="lead">From a simple HTML page to a complete module bundler, even a task runner, DashCore comes with ease integration for every need</p>
+            <a href="#!" class="btn btn-primary btn-lg shadow-primary px-4 mt-4">Join DashCore</a>
+          </div>
+        </div>
+      </div>
+      <div class="bubbles-wrap">
+        <div class="bubbles-container"></div>
+      </div>
+    </header>
+
+    <!-- ./How it works -->
+    <section id="features" class="section how-it-works">
+      <div class="shapes-container">
+        <div class="shape shape-ring" data-aos="fade-right">
+          <div></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2 class="section-title fw-bold text-gradient text-gradient-success"> How it Works? </h2>
+          <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, nulla, voluptates. Architecto eum minima necessitatibus quo reiciendis! </p>
+        </div>
+        <div class="row gap-y text-center text-md-start">
+          <div class="col-md-4 py-4 text-center position-relative">
+            <div class="shapes-figure shapes-container">
+              <div class="shape shape-circle top-0 start-50 translate-middle-x"></div>
+            </div>
+            <figure class="mockup mb-4">
+              <img src="img/integration/steps/plan.svg" class="mb-3 img-step" alt="...">
+            </figure>
+            <h5 class="fw-bold">Choose a plan</h5>
+            <p>Ab ad aliquam assumenda beatae commodi distinctio dolore dolorum earum error et, exercitationem</p>
+          </div>
+          <div class="col-md-4 py-4 text-center position-relative">
+            <div class="shapes-figure shapes-container">
+              <div class="shape shape-circle top-0 start-50 translate-middle-x"></div>
+            </div>
+            <figure class="mockup mb-4">
+              <img src="img/integration/steps/payment.svg" class="mb-3 img-step" alt="...">
+            </figure>
+            <h5 class="fw-bold">Payment method</h5>
+            <p>Blanditiis cumque, eius error est et exercitationem, explicabo hic natus nobis odit porro quia</p>
+          </div>
+          <div class="col-md-4 py-4 text-center position-relative">
+            <div class="shapes-figure shapes-container">
+              <div class="shape shape-circle top-0 start-50 translate-middle-x"></div>
+            </div>
+            <figure class="mockup mb-4">
+              <img src="img/integration/steps/work.svg" class="mb-3 img-step" alt="...">
+            </figure>
+            <h5 class="fw-bold">Let&#39;s work</h5>
+            <p>A animi aperiam cupiditate eum incidunt, magni mollitia nam nemo non officia omnis, quasi quisquam</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Industry leading Section -->
+    <section class="section built-with">
+      <div class="container">
+        <div class="shapes-container">
+          <div class="shape shape-circle" data-aos="fade-up">
+            <div></div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card shadow border-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="d-inline-block text-primary-emphasis bg-primary-subtle rounded-pill px-3 py-1 fw-bold mb-2"> Better tech </p>
+                    <h2 class="mt-3">
+                      <span class="fw-bold text-gradient text-gradient-warning d-block">Industry leading</span> technology stack
+                    </h2>
+                    <p class="lead text-muted">DashCore tech stack gives you everything you need to build robust integrations</p>
+                    <figure>
+                      <img src="img/logos/webpack.svg" class="img-responsive mx-auto" alt="">
+                    </figure>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column justify-content-around">
+                    <div class="text-center">
+                      <figure class="mockup">
+                        <img src="img/logos/javascript.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="text-center">
+                      <figure class="mockup">
+                        <img src="img/logos/es6.svg" alt="">
+                      </figure>
+                    </div>
+                    <div class="text-center">
+                      <figure class="mockup">
+                        <img src="img/logos/sass.svg" alt="">
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 ms-lg-auto text-center text-md-start">
+            <div class="shapes-container">
+              <div class="shape shape-ring shape-ring-1" data-aos="fade-up">
+                <div></div>
+              </div>
+            </div>
+            <div class="section-heading">
+              <figure class="mockup ms-md-0 mx-auto">
+                <img src="img/integration/tech-globe.svg" alt="">
+              </figure>
+              <h2 class="my-3 fs-3">
+                <span class="fw-bold d-block">A complete technology stack</span>awaits for you
+              </h2>
+              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum blanditiis pariatur excepturi provident molestias, ea non! Nesciunt impedit quo blanditiis.</p>
+            </div>
+            <div class="row g-5">
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="activity" width="36" height="36" class="stroke-primary"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Activity</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Get instant insight</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-success-subtle text-success p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="upload-cloud" width="36" height="36" class="stroke-success"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Deploy</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Deploy your project</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-warning-subtle text-warning p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="zap" width="36" height="36" class="stroke-warning"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Fast</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Development lighting fast</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-info-subtle text-info p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="hexagon" width="36" height="36" class="stroke-info"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Technology</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Ultimate technology</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Extend DashCore Section -->
+    <section class="section extend-core bg-body-secondary edge bottom-right">
+      <div class="shapes-container">
+        <div class="shape shape-circle">
+          <div></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 text-center text-lg-start">
+            <div class="section-heading">
+              <p class="d-inline-block text-primary-emphasis bg-primary-subtle rounded-pill px-3 py-1 small text-uppercase"> enterprise integration </p>
+              <h2 class="section-title fw-bold"> Extend DashCore </h2>
+              <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsum iste iure nihil non obcaecati quasi, sit? Aperiam asperiores atque, commodi debitis fugiat in nemo optio sint velit. Pariatur, sint! </p>
+            </div>
+            <a href="#" class="btn btn-primary shadow-primary">Know More</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="icons-wrapper position-relative">
+              <div class="floating icon icon-xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:100%;top:30%" data-aos="fade-left">
+                <img src="img/integration/blossom.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:60%;top:0" data-aos="fade-left">
+                <img src="img/integration/dockbit.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:25%;top:0" data-aos="fade-left">
+                <img src="img/integration/zapier.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-2xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:0;top:50%" data-aos="fade-left">
+                <img src="img/integration/bitnami.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-2xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:23%;top:70%" data-aos="fade-left">
+                <img src="img/integration/slack.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xxl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:65%;top:44%" data-aos="fade-left">
+                <img src="img/integration/monero.svg" class="img-responsive" alt="">
+              </div>
+              <div class="floating icon icon-xl bg-body-tertiary rounded-circle p-3 shadow m-0 position-absolute d-flex justify-content-center align-items-center" style="left:95%;top:83%" data-aos="fade-left">
+                <img src="img/integration/dropbox.svg" class="img-responsive" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Latest projects Section -->
+    <section class="section latest-projects">
+      <div class="container bring-to-front">
+        <div class="card border-0">
+          <div class="p-4">
+            <h5 class="fw-bold mb-0">Latest projects</h5>
+            <p class="text-muted my-0">Take a look at our latest projects, those customer have trust in our services to bring their business to the next level</p>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=1&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=2&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=3&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=4&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=5&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-detail zoom-image overlay overlay-gray">
+                <a href="javascript:;">
+                  <img src="https://picsum.photos/500/300?random=6&gravity=south" alt="">
+                  <div class="description bg-dark text-light p-1 p-md-2">
+                    <p class="fw-bold">Project name</p>
+                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum voluptatem nobis labore sit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Your success is our success Section -->
+    <section class="section">
+      <div class="container bring-to-front">
+        <div class="row g-4 align-items-center justify-content-between">
+          <div class="col-md-6 order-md-last text-center text-md-start">
+            <div class="section-heading">
+              <p class="text-primary fw-bold mb-2"> Fill in the form </p>
+              <h2 class="section-title fw-bold"> Your success is our success </h2>
+              <p class="lead text-muted"> If you&#39;re looking to be part of the most suitable template, just fill in the form, we&#39;re sure we can build great things together </p>
+            </div>
+            <div class="row g-5">
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-primary-subtle text-primary p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="hexagon" width="36" height="36" class="stroke-primary"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Service integrations</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-success-subtle text-success p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="users" width="36" height="36" class="stroke-success"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Partners integration</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-warning-subtle text-warning p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="cpu" width="36" height="36" class="stroke-warning"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Right technology</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+                  <div class="bg-info-subtle text-info p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                    <i data-feather="navigation" width="36" height="36" class="stroke-info"></i>
+                  </div>
+                  <div class="mt-3 mt-lg-0">
+                    <h5 class="fw-bold mt-0 mb-1">Get discovered</h5>
+                    <p class="text-secondary m-0 d-md-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5" data-aos="fade-right">
+            <div class="card shadow-lg">
+              <img src="https://picsum.photos/500/300?random=&gravity=south" alt="..." class="card-img-top">
+              <div class="card-body">
+                <form class="form">
+                  <div class="mb-3">
+                    <label class="form-label" for="name">name</label>
+                    <input type="text" name="Name" placeholder="name" class="form-control" id="name">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="email">email</label>
+                    <input type="text" name="Email" placeholder="email" class="form-control" id="email">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="company">company</label>
+                    <input type="text" name="Company" placeholder="company" class="form-control" id="company">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="d-grid">
+                    <button class="btn btn-primary" type="submit"> Send my application </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section external-tools-integration">
+      <div class="shapes-container">
+        <div class="pattern pattern-dots"></div>
+      </div>
+      <div class="container pb-8 bring-to-front">
+        <div class="row g-4">
+          <div class="col-md-6 text-center text-md-start">
+            <div class="section-heading">
+              <p class="text-primary fw-bold mb-2"> Super easy </p>
+              <h2 class="section-title fw-bold"> Easy external tools integration </h2>
+              <p class="lead text-muted"> Easily integrates with another templates of our own creation </p>
+            </div>
+            <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start  mb-5">
+              <div class="bg-primary-subtle text-primary p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                <i data-feather="box" width="36" height="36" class="stroke-primary"></i>
+              </div>
+              <div class="mt-3 mt-lg-0">
+                <h5 class="fw-bold mt-0 mb-1">Integrations</h5>
+                <p class="text-secondary m-0 d-md-none d-lg-block">We designed DashCore to be able to integrate with additional templates designed by our team</p>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-lg-row align-items-center align-items-md-start">
+              <div class="bg-success-subtle text-success p-3 rounded-2 me-lg-3 me-md-auto mx-auto ms-md-0">
+                <i data-feather="layers" width="36" height="36" class="stroke-success"></i>
+              </div>
+              <div class="mt-3 mt-lg-0">
+                <h5 class="fw-bold mt-0 mb-1">Components</h5>
+                <p class="text-secondary m-0 d-md-none d-lg-block">All its components share a core styling, this will allow to share multiple components where you need</p>
+              </div>
+            </div>
+            <hr class="my-5">
+            <div class="text-center text-md-start">
+              <a href="#!" class="btn btn-primary"> Know more <i class="fa fa-long-arrow-right ms-3"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rotated-mockups device-twin">
+              <div class="browser position-absolute shadow-lg">
+                <img src="img/screens/tablet/1.png" alt="...">
+              </div>
+              <div class="front iphone-x">
+                <div class="screen">
+                  <img src="img/screens/app/1.png" alt="...">
+                </div>
+                <div class="notch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Logos Section -->
+    <section class="section bg-body-secondary edge top-left">
+      <div class="container position-relative py-5 border-bottom">
+        <div class="swiper" data-sw-show-items="5" data-sw-space-between="30" data-sw-autoplay="2500" data-sw-loop="true">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="img/logos/1.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/2.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/3.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/4.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/5.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/1.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/logos/2.svg" class="img-responsive" alt="" style="max-height:48px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./Testimonials -->
+
+    <!-- ./Our customers have something to say Section -->
+    <section class="section bg-body-secondary slider-testimonials">
+      <div class="container swiper-center-nav bring-to-front">
+        <div class="section-heading text-center">
+          <h2 class="section-title fw-bold"> Our customers have something to say </h2>
+          <p class="lead text-muted"> They are the best, our customer want to let you know how DashCore is helping them to achieve their goals and how simple is to use it </p>
+        </div>
+        <div class="card shadow-lg rounded-5">
+          <div class="row g-0 swiper-center-nav">
+            <div class="col-md-6">
+
+              <!-- Images slider, will fade -->
+              <div class="swiper h-100" data-sw-effect="fade" data-sw-space-between="0" data-sw-pagination="false" data-sw-nav-arrows=".nav-testimonial">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/1.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/2.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/3.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/4.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/5.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/6.jpg"> </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure class="m-0 image-background cover rounded-5 h-100" data-background-image="img/authors/pictures/7.jpg"> </figure>
+                  </div>
+                </div>
+                <div class="divider"></div>
+              </div>
+
+              <!-- Prev button -->
+              <div class="swiper-button swiper-button-prev nav-testimonial-prev rounded-circle shadow p-2">
+                <i data-feather="arrow-left"></i>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <!-- Testimonials slider, will slide -->
+              <div class="swiper h-100" data-sw-pagination="false" data-sw-nav-arrows=".nav-testimonial">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/1.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Arianna Rivera</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/2.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Audrey Meyer</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/1.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Connie Rhodes</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/2.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Isabella Lucas</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/2.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Kathryn Reyes</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/1.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, quas sunt enim tempore minima tenetur voluptatem provident. Incidunt accusantium.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Peyton Jimenez</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center">
+                      <blockquote class="blockquote text-center mb-0">
+                        <figure class="mockup mb-5">
+                          <img src="img/logos/companies/2.svg" alt="..." class="img-responsive">
+                        </figure>
+                        <i class="fas fa-quote-left fa-2x op-4 absolute-md left top"></i>
+                        <p class="mb-5 mb-md-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo harum eaque voluptatibus est obcaecati exercitationem maxime illo nihil voluptatem.</p>
+                        <footer class="blockquote-footer">
+                          <span class="h6 text-uppercase">Ruby Peterson</span>
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Next button -->
+              <div class="swiper-button swiper-button-next nav-testimonial-next rounded-circle shadow p-2">
+                <i data-feather="arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ./CTA - Buy it now Section -->
+    <section class="section bg-body edge top-left">
+      <div class="container pt-5 border-bottom">
+        <div class="d-flex align-items-center flex-column flex-md-row">
+          <div class="text-center text-md-start">
+            <p class="text-gradient text-gradient-primary mb-0 lead fw-bold">Ready to get started?</p>
+            <h2 class="mt-0 fw-bold">Create an account now</h2>
+          </div>
+          <a href="srv/register" class="btn btn-primary shadow-primary mt-3 mt-md-0 ms-md-auto"> Create DashCore account </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Page footer -->
+
+  <!-- ./Footer - Four Columns -->
+  <footer class="site-footer section">
+    <div class="container pb-3">
+      <div class="row g-4 text-center text-md-start">
+        <div class="col-md-4 me-auto">
+          <a href="./" class="link-logo">
+            <img src="img/logo.svg" alt="" class="logo mb-4">
+          </a>
+          <p>DashCore, a carefully crafted and powerful HTML5 template, it&#39;s perfect to showcase your startup or software</p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="py-2 fw-bold text-uppercase">Company</h6>
+          <nav class="nav flex-column">
+            <a class="nav-item py-2" href="about.html">About</a>
+            <a class="nav-item py-2" href="#">Services</a>
+            <a class="nav-item py-2" href="blog/">Blog</a>
+          </nav>
+        </div>
+        <div class="col-md-2">
+          <h6 class="py-2 fw-bold text-uppercase">Product</h6>
+          <nav class="nav flex-column">
+            <a class="nav-item py-2" href="#">Features</a>
+            <a class="nav-item py-2" href="#">API</a>
+            <a class="nav-item py-2" href="#">Customers</a>
+          </nav>
+        </div>
+        <div class="col-md-2">
+          <h6 class="py-2 fw-bold text-uppercase">Channels</h6>
+          <nav class="nav flex-column">
+            <a class="nav-item py-2" href="#">Careers</a>
+            <a class="nav-item py-2" href="contact.html">Contact</a>
+            <a class="nav-item py-2" href="#">Search</a>
+          </nav>
+        </div>
+      </div>
+      <hr class="mt-5">
+      <div class="row small align-items-center">
+        <div class="col-md-4">
+          <p class="mt-2 mb-md-0 text-secondary text-center text-md-start">© 2024 5studios.net. All Rights Reserved</p>
+        </div>
+        <div class="col-md-8">
+          <nav class="nav social-icons justify-content-center justify-content-md-end">
+            <a href="#" class="btn btn-sm btn-facebook me-3">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-twitter text-white  me-3">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-whatsapp me-3">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-instagram text-white  me-3">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="btn btn-warning shadow-warning rounded-circle p-3 d-flex align-items-center justify-content-center scroll-to-top">
+    <i data-feather="chevron-up" width="18" height="18"></i>
+  </button>
+
+  <!--
+    Compiled js scripts.
+    We created and included a webpack configuration file you can compile the js.
+    Please refer to the docs in order to learn how to compile and replace this file.
+  -->
+  <script src="js/dashcore.95cbb7260081cb946756.js"></script>
+  <script src="js/loading.b6bb5062cb3673f443b3.js"></script>
+</body>
+</html>
