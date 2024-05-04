@@ -21,9 +21,9 @@
         transform: rotate(1turn)
       }
     }
-
+  
     .page-loading {
-      background-color: #fff;
+      background-color: var(--dc-panel-bg, #fff); /* default light background */
       bottom: 0;
       height: 100%;
       left: 0;
@@ -36,16 +36,16 @@
       width: 100%;
       z-index: 99999
     }
-
+  
     .page-loading.active {
       opacity: 1;
       visibility: visible
     }
-
+  
     .page-loading.active>.page-loading-inner {
       opacity: 1
     }
-
+  
     .page-loading-inner {
       left: 0;
       opacity: 0;
@@ -56,17 +56,17 @@
       transition: opacity .2s ease-in-out;
       width: 100%
     }
-
+  
     .page-loading-inner>span {
-      color: #9397ad;
+      color: #9397ad; /* default light text color */
       display: block;
       font-size: 1rem;
       font-weight: 400
     }
-
+  
     .page-spinner {
       animation: spinner .75s linear infinite;
-      border: .15em solid #b4b7c9;
+      border: .15em solid #b4b7c9; /* light border */
       border-radius: 50%;
       border-right-color: transparent;
       display: inline-block;
@@ -75,8 +75,21 @@
       vertical-align: text-bottom;
       width: 2.75rem
     }
-
+  
+    [data-bs-theme="light"] .page-loading {
+      background-color: #fff; /* specific light background if needed */
+    }
+  
+    [data-bs-theme="light"] .page-loading-inner>span {
+      color: #000; /* specific light text color if needed */
+      opacity: 1; /* adjust as necessary */
+    }
+  
+    [data-bs-theme="light"] .page-spinner {
+      border-color: #b4b7c9 transparent #b4b7c9 #b4b7c9; /* specific light spinner border */
+    }
   </style>
+  
 
 
   <link rel="icon" href="public/img/logo5.png">
@@ -101,6 +114,7 @@
       <span>Loading...</span>
     </div>
   </div>
+  
 
   <!-- Page Navbar -->
   <nav class="st-nav navbar navbar-expand-lg fixed-top" id="main-nav">
@@ -124,32 +138,6 @@
           <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="pages"> Inicio </a>
           <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="blocks"> Servicios </a>
           <a class="st-root-link item-company st-has-dropdown nav-link" data-dropdown="components"> Nosotros </a>
-                    <!-- Theme switcher -->
-                    <div class="dropdown">
-                      <button class="nav-link p-0 dropdown-toggle d-flex align-items-center" id="dc-theme" type="button" data-bs-toggle="dropdown" data-bs-display="static">
-                        <span class="theme-icon-active">
-                          <i class="theme-icon" data-feather="circle" width="18" height="18"></i>
-                        </span>
-                        <span class="d-lg-none ms-2" id="dc-theme-text">Toggle theme</span>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dc-theme-text">
-                        <li>
-                          <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                            <i class="theme-icon me-2" data-feather="moon" width="18" height="18"></i> Dark
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                            <i class="theme-icon me-2" data-feather="sun" width="18" height="18"></i> Light
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="dropdown-item py-2 px-3 d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
-                            <i class="theme-icon me-2" data-feather="circle" width="18" height="18"></i> Auto
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
         </li>
 
         <!-- Mobile navigation modal -->
