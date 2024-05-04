@@ -15,80 +15,31 @@
   <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 
   <!-- Page loading styles. Should be included inline to avoid loading it externally -->
-  <style>
-    @keyframes spinner {
-      to {
-        transform: rotate(1turn)
-      }
-    }
-  
-    .page-loading {
-      background-color: var(--dc-panel-bg, #fff); /* default light background */
-      bottom: 0;
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: fixed;
-      right: 0;
-      top: 0;
-      transition: all .4s ease-in-out .2s;
-      visibility: hidden;
-      width: 100%;
-      z-index: 99999
-    }
-  
-    .page-loading.active {
-      opacity: 1;
-      visibility: visible
-    }
-  
-    .page-loading.active>.page-loading-inner {
-      opacity: 1
-    }
-  
-    .page-loading-inner {
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: opacity .2s ease-in-out;
-      width: 100%
-    }
-  
-    .page-loading-inner>span {
-      color: #9397ad; /* default light text color */
-      display: block;
-      font-size: 1rem;
-      font-weight: 400
-    }
-  
-    .page-spinner {
-      animation: spinner .75s linear infinite;
-      border: .15em solid #b4b7c9; /* light border */
-      border-radius: 50%;
-      border-right-color: transparent;
-      display: inline-block;
-      height: 2.75rem;
-      margin-bottom: .75rem;
-      vertical-align: text-bottom;
-      width: 2.75rem
-    }
-  
-    [data-bs-theme="light"] .page-loading {
-      background-color: #fff; /* specific light background if needed */
-    }
-  
-    [data-bs-theme="light"] .page-loading-inner>span {
-      color: #000; /* specific light text color if needed */
-      opacity: 1; /* adjust as necessary */
-    }
-  
-    [data-bs-theme="light"] .page-spinner {
-      border-color: #b4b7c9 transparent #b4b7c9 #b4b7c9; /* specific light spinner border */
-    }
-  </style>
+<style>
+  :root {
+    --dc-panel-bg: #fff;
+    --dc-navbar-color-rgb: 255, 255, 255;
+    --dc-navbar-sticky-color-rgb: 0, 0, 0;
+    --dc-blue: #0d6efd;
+    --dc-indigo: #53f;
+    --dc-purple: #6f42c1;
+    --dc-pink: #f200c2;
+    --dc-red: #ff0080;
+    --dc-orange: #ff794f;
+    /* Continue defining all other light mode colors and styles */
+  }
+
+  body {
+    background-color: var(--dc-panel-bg);
+    color: var(--dc-body-color, #333); /* Fallback to a default if not specified */
+  }
+
+  .navbar, .footer {
+    background-color: var(--dc-navbar-color-rgb);
+  }
+
+  /* More styles to ensure complete coverage of your site’s components */
+</style>
   
 
 
