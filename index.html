@@ -1,214 +1,347 @@
 <!doctype html>
-
-<!-- Include a default theme value to start with the theme of your preference, dark|light are accepted -->
-<html lang="en" data-bs-theme="light">
+<html lang="es">
 
 <head>
-  <meta charset="utf-8"> <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#312E81">
 
   <!-- SEO -->
-  <meta name="description" content="DashCore Powerful Responsive SaaS, Startup &amp; Technology HTML Template">
-  <meta name="keywords" content="template, bootstrap, business, creative agency, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, touch, creative, babel, webpack">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="5studios">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+  <title>IHNIWID Solutions — Automatización de procesos a medida</title>
+  <meta name="description"
+    content="Estudio de desarrollo de software a medida especializado en automatización de procesos: pedidos, facturación, gestión de ONGs y tareas repetitivas. Prototipo gratis, sin compromiso.">
+  <link rel="canonical" href="https://www.ihniwid.com/">
+  <link rel="icon" href="public/img/logo.svg" type="image/svg+xml">
 
-  <!-- Page loading styles. Should be included inline to avoid loading it externally -->
-<style>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IHNIWID Solutions — Automatización de procesos">
+  <meta property="og:description"
+    content="Invierte tu tiempo en lo importante, automatiza lo demás. Software a medida que se encarga del trabajo repetitivo de tu empresa.">
+  <meta property="og:url" content="https://www.ihniwid.com/">
+  <meta property="og:image" content="https://www.ihniwid.com/public/img/logo.svg">
 
-</style>
-  
+  <!-- Fuente (con fallback de sistema; si falla la red, la web sigue perfecta) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
+  <style>
+    /* ==========================================================================
+       IHNIWID Solutions — hoja de estilo única, autocontenida.
+       Paleta elegida para deuteranopía: eje azul (índigo) / ámbar + neutros.
+       Sin verde ni rojo como señal funcional. Contraste validado WCAG AA.
+       ========================================================================== */
+    :root {
+      --ink: #0E1A2B;          /* texto principal — 16:1 sobre blanco   */
+      --muted: #48566E;        /* texto secundario — ~6.5:1 sobre blanco */
+      --line: #E3E8F1;         /* bordes suaves                          */
+      --bg: #FFFFFF;
+      --bg-soft: #F5F8FC;      /* secciones alternas                     */
 
-  <link rel="icon" href="public/img/logo5.png">
-  <title>IHNIWID Solutions</title>
+      --brand: #4338CA;        /* índigo — botones/enlaces sobre blanco (~8:1) */
+      --brand-strong: #312E81; /* índigo profundo — hero                 */
+      --brand-tint: #EEF0FB;   /* fondo tenue de marca                   */
 
-  <!--
-    Compiled css styles.
-    We created and included a webpack configuration file you can compile the css.
-    Please refer to the docs in order to learn how to compile and replace this file.
-  -->
-  <link rel="stylesheet" href="public/css/dashcore.41588051c3b03e83ed26.css">
+      --accent: #F59E0B;       /* ámbar — color de conversión            */
+      --accent-strong: #B45309;/* ámbar oscuro — texto sobre blanco (~4.7:1) */
+
+      --radius: 14px;
+      --radius-lg: 22px;
+      --shadow: 0 1px 2px rgba(14,26,43,.04), 0 12px 30px -12px rgba(14,26,43,.16);
+      --shadow-sm: 0 1px 2px rgba(14,26,43,.05), 0 4px 12px -6px rgba(14,26,43,.12);
+      --maxw: 1120px;
+      --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; margin: 0; font-weight: 800; }
+    p { margin: 0; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img, svg { max-width: 100%; display: block; }
+
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+    .eyebrow.on-dark { color: #FCD8A0; }
+
+    .section { padding: 88px 0; }
+    .section-soft { background: var(--bg-soft); }
+    .section-head { max-width: 640px; margin: 0 auto 56px; text-align: center; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 40px); margin: 14px 0 0; }
+    .section-head p { color: var(--muted); margin-top: 16px; font-size: 18px; }
+
+    /* ---- Botones ---------------------------------------------------------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-weight: 700; font-size: 16px; line-height: 1;
+      padding: 15px 24px; border-radius: 999px; border: 2px solid transparent;
+      cursor: pointer; transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn-accent { background: var(--accent); color: var(--ink); box-shadow: 0 8px 20px -8px rgba(245,158,11,.7); }
+    .btn-accent:hover { background: #FFB020; }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: #3730A3; }
+    .btn-ghost-light { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.4); }
+    .btn-ghost-light:hover { background: rgba(255,255,255,.16); }
+    .btn-outline { background: #fff; color: var(--brand); border-color: var(--line); }
+    .btn-outline:hover { border-color: var(--brand); }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+    /* ---- Header / nav ----------------------------------------------------- */
+    header.site {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.85); backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; color: var(--ink); font-size: 19px; letter-spacing: -.01em; }
+    .brand:hover { text-decoration: none; }
+    .brand img { width: 34px; height: 34px; }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { color: var(--ink); font-weight: 500; font-size: 15px; }
+    .nav-links a:hover { color: var(--brand); text-decoration: none; }
+    .nav-links .btn-accent { display: none; } /* solo visible dentro del menú móvil abierto */
+    .nav-cta { display: flex; align-items: center; gap: 14px; }
+    .nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; color: var(--ink); }
+
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta .btn { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+        position: absolute; left: 16px; right: 16px; top: 68px;
+        background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 12px; box-shadow: var(--shadow);
+      }
+      .nav-links.open a { padding: 12px 10px; width: 100%; border-radius: 8px; }
+      .nav-links.open a:hover { background: var(--bg-soft); }
+      .nav-links.open .btn-accent { display: inline-flex; width: 100%; margin-top: 6px; }
+    }
+
+    /* ---- Hero ------------------------------------------------------------- */
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background: radial-gradient(120% 120% at 15% 0%, #4338CA 0%, #312E81 55%, #23206B 100%);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(40% 50% at 85% 15%, rgba(245,158,11,.20), transparent 70%),
+        radial-gradient(30% 40% at 10% 90%, rgba(129,140,248,.25), transparent 70%);
+    }
+    .hero .wrap { position: relative; z-index: 1; padding-top: 92px; padding-bottom: 104px; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(34px, 5.2vw, 56px); font-weight: 800; margin: 18px 0 0; }
+    .hero h1 .amber { color: #FBBF24; }
+    .hero .lead { font-size: clamp(17px, 2vw, 20px); color: #D7DAF3; margin-top: 22px; max-width: 34ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 22px; font-size: 14.5px; color: #C7CBEC; }
+    .hero-note svg { flex: none; }
+
+    /* Tarjeta ilustrativa del hero (sin imágenes: SVG + CSS) */
+    .hero-card {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius-lg); padding: 22px; backdrop-filter: blur(6px);
+      box-shadow: 0 30px 60px -30px rgba(0,0,0,.55);
+    }
+    .flowrow { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: var(--radius);
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.10); margin-bottom: 12px; }
+    .flowrow:last-child { margin-bottom: 0; }
+    .flowrow .ic { flex: none; width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center;
+      background: rgba(251,191,36,.16); color: #FBBF24; }
+    .flowrow.done .ic { background: rgba(199,203,236,.18); color: #C7CBEC; }
+    .flowrow strong { display: block; font-size: 14.5px; color: #fff; }
+    .flowrow span { font-size: 13px; color: #B9BEE6; }
+    .flowrow .tag { margin-left: auto; font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+      padding: 5px 10px; border-radius: 999px; background: rgba(251,191,36,.15); color: #FBBF24; }
+    .flowrow.done .tag { background: rgba(199,203,236,.15); color: #C7CBEC; }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero .lead { max-width: none; }
+      .hero-visual { display: none; }
+    }
+
+    /* ---- Logos ------------------------------------------------------------ */
+    .logos { padding: 40px 0 8px; }
+    .logos p { text-align: center; color: var(--muted); font-size: 13px; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: 26px; }
+    .logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px 56px; }
+    .logo-row img { height: 34px; width: auto; opacity: .62; filter: grayscale(1); transition: opacity .2s; }
+    .logo-row img:hover { opacity: 1; filter: grayscale(0); }
+
+    /* ---- Servicios -------------------------------------------------------- */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+      padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+    }
+    .card .ic {
+      width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--brand-tint); color: var(--brand); margin-bottom: 20px;
+    }
+    .card h3 { font-size: 21px; }
+    .card .sub { color: var(--accent-strong); font-weight: 700; font-size: 14px; margin: 6px 0 14px; }
+    .card p { color: var(--muted); font-size: 15.5px; }
+    @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+
+    /* ---- Cómo funciona ---------------------------------------------------- */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
+    .step { position: relative; padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+    .step .num {
+      width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--brand-strong); color: #fff; font-weight: 800; font-size: 19px; margin-bottom: 18px;
+    }
+    .step h3 { font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 15px; }
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+
+    /* ---- Garantía (banda destacada) --------------------------------------- */
+    .guarantee { background: linear-gradient(135deg, #312E81 0%, #4338CA 100%); color: #fff; }
+    .guarantee .wrap { display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center; }
+    .guarantee h2 { font-size: clamp(26px, 3.6vw, 36px); }
+    .guarantee p { color: #D7DAF3; margin-top: 16px; font-size: 18px; }
+    .guarantee .badge {
+      background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.35); border-radius: var(--radius-lg);
+      padding: 28px; text-align: center;
+    }
+    .guarantee .badge .big { font-size: 44px; font-weight: 800; color: #FBBF24; letter-spacing: -.03em; }
+    .guarantee .badge .lbl { color: #E7E9FA; font-weight: 600; margin-top: 6px; }
+    @media (max-width: 860px) { .guarantee .wrap { grid-template-columns: 1fr; } }
+
+    /* ---- Contacto --------------------------------------------------------- */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-info h2 { font-size: clamp(28px, 4vw, 38px); }
+    .contact-info p { color: var(--muted); margin-top: 16px; font-size: 18px; }
+    .contact-methods { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+    .cmethod { display: flex; align-items: center; gap: 14px; font-weight: 600; color: var(--ink); }
+    .cmethod:hover { text-decoration: none; }
+    .cmethod .ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+      background: var(--brand-tint); color: var(--brand); flex: none; }
+    .cmethod small { display: block; font-weight: 500; color: var(--muted); }
+
+    form.contact { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+      padding: 28px; box-shadow: var(--shadow-sm); }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 7px; }
+    .field input, .field textarea {
+      width: 100%; padding: 13px 14px; border: 1px solid var(--line); border-radius: 11px;
+      font-family: inherit; font-size: 15.5px; color: var(--ink); background: #fff; transition: border .12s, box-shadow .12s;
+    }
+    .field input:focus, .field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(67,56,202,.15); }
+    .field textarea { resize: vertical; min-height: 120px; }
+    form.contact .btn-accent { width: 100%; margin-top: 4px; }
+    .form-legal { font-size: 12.5px; color: var(--muted); margin-top: 14px; text-align: center; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    /* ---- Footer ----------------------------------------------------------- */
+    footer.site { background: var(--ink); color: #B9C2D4; padding: 56px 0 28px; }
+    footer.site .top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.10); }
+    footer.site .brand { color: #fff; margin-bottom: 14px; }
+    footer.site .brand img { filter: brightness(0) invert(1); opacity: .95; }
+    footer.site .about { font-size: 14.5px; max-width: 38ch; }
+    footer.site h4 { color: #fff; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 16px; }
+    footer.site nav a { display: block; color: #B9C2D4; font-size: 15px; padding: 6px 0; }
+    footer.site nav a:hover { color: #fff; text-decoration: none; }
+    .foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; font-size: 13.5px; }
+    .social { display: flex; gap: 10px; }
+    .social a { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+      background: rgba(255,255,255,.07); color: #C7CFDE; }
+    .social a:hover { background: var(--brand); color: #fff; }
+    @media (max-width: 860px) { footer.site .top { grid-template-columns: 1fr 1fr; } .foot-bottom { flex-direction: column; align-items: flex-start; } }
+
+    .skip { position: absolute; left: -9999px; top: 0; background: #fff; color: var(--brand); padding: 10px 16px; z-index: 100; border-radius: 0 0 8px 0; }
+    .skip:focus { left: 0; }
+  </style>
 </head>
 
-<body> <!--[if lt IE 8]>
-  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<body>
+  <a href="#servicios" class="skip">Saltar al contenido</a>
 
-  <!-- Page loading -->
-  <div class="page-loading active">
-    <div class="page-loading-inner">
-      <div class="page-spinner"></div>
-      <span>Loading...</span>
+  <!-- ============ HEADER ============ -->
+  <header class="site">
+    <div class="wrap nav">
+      <a href="#top" class="brand" aria-label="IHNIWID Solutions, inicio">
+        <img src="public/img/logo.svg" alt="">
+        <span>IHNIWID</span>
+      </a>
+      <nav class="nav-links" id="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#garantia">Garantía</a>
+        <a href="#contacto" class="btn btn-accent">Pide tu prototipo gratis</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contacto" class="btn btn-accent">Pide tu prototipo gratis</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
     </div>
-  </div>
-  
+  </header>
 
-  <!-- Page Navbar -->
-  <nav class="st-nav navbar navbar-expand-lg fixed-top" id="main-nav">
-    <div class="container">
-      <ul class="st-nav-menu nav navbar-nav">
-        <li class="st-nav-section nav-item">
-          <a href="#" class="link-logo navbar-brand nav-link">
-            <img src="public/img/logo5.png" alt="" class="logo mb-4">
-          </a>
-        </li>
-        
-        <!-- <div class="col-md-4 me-auto">
-          <a href="./" class="link-logo">
-            <img src="public/img/logo5.png" alt="" class="logo mb-4">
-          </a>
-          <p>IHNIWID Solutions, estudio de desarrollo de aplicaciones informáticas, especializado en automatización de procesos.</p>
-        </div> -->
+  <main id="top">
 
-        <!-- Primary navigation elements -->
-        <li class="st-nav-section st-nav-primary  nav-item">
-          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="pages"> Inicio </a>
-          <a class="st-root-link item-products st-has-dropdown nav-link" data-dropdown="blocks"> Servicios </a>
-          <a class="st-root-link item-company st-has-dropdown nav-link" data-dropdown="components"> Nosotros </a>
-        </li>
-
-        <!-- Mobile navigation modal -->
-        <li class="st-nav-section st-nav-mobile nav-item">
-          <button class="st-root-link navbar-toggler" type="button">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="st-popup">
-            <div class="st-popup-container bg-body-tertiary">
-              <a class="st-popup-close-button">Close</a>
-              <div class="st-dropdown-content-group">
-                <h4 class="text-uppercase">Pages</h4>
-                <a class="text-primary" href="about.html">
-                  <i class="far fa-building icon"></i> About
-                </a>
-                <a class="text-success" href="contact.html">
-                  <i class="far fa-envelope icon"></i> Contact
-                </a>
-                <a class="text-warning" href="pricing.html">
-                  <i class="fas fa-hand-holding-usd icon"></i> Pricing
-                </a>
-                <a class="text-info" href="faqs.html">
-                  <i class="far fa-question-circle icon"></i> FAQs
-                </a>
-              </div>
-              <div class="st-dropdown-content-group border-top">
-                <h4 class="text-uppercase fw-bold">Components</h4>
-                <div class="row">
-                  <div class="col me-4">
-                    <a href="components/alert.html">Alerts</a>
-                    <a href="components/badge.html">Badges</a>
-                    <a href="components/button.html">Buttons</a>
-                    <a href="components/color.html">Colors</a>
-                    <a href="components/accordion.html">Accordion</a>
-                  </div>
-                  <div class="col me-4">
-                    <a href="components/overlay.html">Overlay</a>
-                    <a href="components/progress.html">Progress</a>
-                    <a href="components/lightbox.html">Lightbox</a>
-                    <a href="components/tab.html">Tabs</a>
-                    <a href="components/tables.html">Tables</a>
-                    <a href="components/typography.html">Typography</a>
-                  </div>
-                </div>
-              </div>
-              <div class="st-dropdown-content-group border-top">
-                <a href="auth/login.html">Sign in <i class="fas fa-long-arrow-right ms-3"></i>
-                </a>
-              </div>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow on-dark">Estudio de automatización de procesos</span>
+            <h1>Invierte tu tiempo en lo importante.<br><span class="amber">Automatiza lo demás.</span></h1>
+            <p class="lead">Desarrollamos software a medida que se encarga del trabajo repetitivo de tu empresa —pedidos, facturación, gestión— para que tu equipo se dedique a lo que de verdad aporta valor.</p>
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-accent">Pide tu prototipo gratis</a>
+              <a href="#servicios" class="btn btn-ghost-light">Ver qué automatizamos</a>
+            </div>
+            <div class="hero-note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Prototipo funcional gratis · Sin coste ni compromiso
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-    <div class="st-dropdown-root">
-      <div class="st-dropdown-bg">
-        <div class="st-alt-bg"></div>
-      </div>
-      <div class="st-dropdown-arrow">
-        <!-- Contenido Inicio -->
-      </div>
-      <div class="st-dropdown-container">
-        <div class="st-dropdown-section" data-dropdown="blocks">
-          <div class="st-dropdown-content">
-        <!-- Contenido Servicios -->
-          </div>
-        </div>
-        <div class="st-dropdown-section" data-dropdown="components">
-          <div class="st-dropdown-content">
-        <!-- Contenido Nosotros -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Main content, everything should be placed inside this main tag but the nav and footer -->
-  <main class="position-relative overflow-hidden">
-
-    <!-- Integration Heading -->
-    <header class="section header business-header bg-primary bg-gradient">
-      <div class="container pb-8">
-        <div class="row">
-          <div class="col-md-10 mx-auto text-center">
-            <h1 class="mt-3 text-white">
-              <span class="display-4 display-md-2 fw-bold">IHNIWID Solutions</span>
-              <br> Automatización de procesos
-            </h1>
-            <p class="lead text-white my-5 op-8">Invierte tu tiempo en lo importante, automatiza lo demás</p>            
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- ./Curve Divider -->
-    <div class="position-relative ">
-      <div class="shape-divider shape-divider-bottom shape-divider-curve shape-divider-fluid-x text-body-emphasis">
-        <svg viewBox="0 0 2880 48" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" />
-        </svg>
-      </div>
-    </div>
-
-    <!-- ./Logos Section -->
-    <section class="section mt-n5">
-      <div class="container pt-0">
-        <div class="card shadow-lg">
-          <div class="card-body p-5">
-            <div class="swiper" data-sw-show-items="5" data-sw-space-between="30" data-sw-autoplay="2500" data-sw-loop="true">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="public/img/logos/3.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/6.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/4.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/7.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/8.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/3.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/6.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/4.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/7.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
-                <div class="swiper-slide">
-                  <img src="public/img/logos/8.svg" class="img-responsive" alt="" style="max-height:48px">
-                </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card">
+              <div class="flowrow done">
+                <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
+                <div><strong>Pedido recibido por email</strong><span>Presupuesto #4021</span></div>
+                <span class="tag">Auto</span>
+              </div>
+              <div class="flowrow done">
+                <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 9 18l-5-5"/></svg></span>
+                <div><strong>Stock comprobado</strong><span>Existencias confirmadas</span></div>
+                <span class="tag">Auto</span>
+              </div>
+              <div class="flowrow">
+                <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+                <div><strong>Factura generada y enviada</strong><span>Cliente + almacén</span></div>
+                <span class="tag">Auto</span>
+              </div>
+              <div class="flowrow">
+                <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+                <div><strong>Orden lista para almacén</strong><span>Preparación de envío</span></div>
+                <span class="tag">Auto</span>
               </div>
             </div>
           </div>
@@ -216,155 +349,210 @@
       </div>
     </section>
 
-    <!-- Servicios -->
-    
-    <section class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2 class="fw-bold text-gradient text-gradient-primary">Automatizamos cualquier tarea</h2>
+    <!-- ============ LOGOS ============
+         TODO IHNIWID: deja aquí SOLO logos de clientes reales que te hayan dado
+         permiso. Reemplaza/elimina los que no correspondan. -->
+    <section class="logos section-soft">
+      <div class="wrap">
+        <p>Empresas y organizaciones que ya automatizan con nosotros</p>
+        <div class="logo-row">
+          <img src="public/img/logos/4.svg" alt="Cliente">
+          <img src="public/img/logos/6.svg" alt="Cliente">
+          <img src="public/img/logos/7.svg" alt="Cliente">
+          <img src="public/img/logos/8.svg" alt="Cliente">
         </div>
+      </div>
+    </section>
 
-        <nav class="nav nav-tabs nav-slide tabs-clean justify-content-around justify-content-md-center mb-5">
-          <button class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#Dashboard-tab">
-            <i data-feather="pie-chart" width="18" height="18" class="d-inline d-md-none"></i>
-            <span class="d-none d-md-inline">Tramitación de Pedidos</span>
-          </button>
-          <button class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#Calendar-tab">
-            <i data-feather="calendar" width="18" height="18" class="d-inline d-md-none"></i>
-            <span class="d-none d-md-inline">Gestión integral de ONGs</span>
-          </button>
-          <button class="nav-item nav-link" data-bs-toggle="tab" data-bs-target="#Inbox-tab">
-            <i data-feather="inbox" width="18" height="18" class="d-inline d-md-none"></i>
-            <span class="d-none d-md-inline">Lo que necesites</span>
-          </button>
-        </nav>
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Qué hacemos</span>
+          <h2>Automatizamos cualquier tarea repetitiva</h2>
+          <p>Si la haces una y otra vez siguiendo unas reglas, se puede automatizar. Estos son algunos ejemplos reales.</p>
+        </div>
+        <div class="cards">
 
-        <div class="tab-content">
+          <article class="card">
+            <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <h3>Tramitación de pedidos</h3>
+            <p class="sub">Desde el presupuesto hasta el almacén</p>
+            <p>Gestión automatizada de todo el proceso: recepción del pedido, comprobación de existencias, elaboración de la factura y su envío al cliente y al departamento correspondiente, más las instrucciones de preparación para el almacén. Controla el stock y avisa cuando quedan pocas unidades.</p>
+          </article>
 
-          <!-- PEDIDOS -->
-          <div class="tab-pane show active" id="Dashboard-tab">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-7">
-                  <img src="public/img/services/pedidos.png" class="img-responsive" alt="">
-              </div>
-              <div class="col-lg-5 ms-auto">
-                <h2 class="fw-bold display-md-4 text-gradient text-gradient-success">Pedidos</h2>
-                <p class="lead text-muted">Desde el presupuesto hasta el almacén</p>
-                <p class="mt-5">Gestión automatizada de todo el proceso de pedido, desde la recepción del mismo hasta las instrucciones de preparación para el almacén, pasando por comprobar si hay existencias de los productos, la elaboración de la factura, su remisión al cliente y al departamento correspondiente.<br><br>Gestiona el stock mediante consultas al responsable, para sustituir productos o realizar pedidos cuando queden pocas unidades.</p>
-              </div>
-            </div>
+          <article class="card">
+            <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Gestión de asociaciones y ONGs</h3>
+            <p class="sub">Reduce la carga de tus voluntarios</p>
+            <p>Nuestro sistema SGA automatiza la mayor parte de las tareas de asociaciones, fundaciones y ONGs. Genera automáticamente la relación de donaciones que se remite a la Agencia Tributaria y emite los certificados a los contribuyentes, facilitando la relación con la Administración.</p>
+          </article>
+
+          <article class="card">
+            <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m16.2 7.8 2.9-2.9"/><path d="M18 12h4"/><path d="m16.2 16.2 2.9 2.9"/><path d="M12 18v4"/><path d="m4.9 19.1 2.9-2.9"/><path d="M2 12h4"/><path d="m4.9 4.9 2.9 2.9"/></svg></span>
+            <h3>Lo que necesites</h3>
+            <p class="sub">Rétanos</p>
+            <p>Alta de productos, registro de clientes, listados en Excel… El sistema obtiene la información del origen —un email, un PDF o cualquier archivo— y ejecuta las acciones que esperas. El objetivo: que tu plantilla haga lo importante y deje lo monótono a las máquinas, reduciendo su carga repetitiva hasta un 50%.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section section-soft" id="como-funciona">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>De la idea a producción en tres pasos</h2>
+          <p>Sin presentaciones eternas ni compromisos por adelantado. Primero te demostramos que funciona.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Nos cuentas la tarea</h3>
+            <p>Esa gestión repetitiva que te come horas cada semana. Nosotros estudiamos cómo automatizarla de principio a fin.</p>
           </div>
-
-          <!-- ONGs -->
-
-          <div class="tab-pane" id="Calendar-tab">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-7">
-                  <img src="public/img/services/ongs2.png" class="img-responsive" alt="">
-              </div>
-              <div class="col-lg-5 ms-auto">
-                <h2 class="fw-bold display-md-4 text-gradient text-gradient-success">Asociaciones y ONGs</h2>
-                <p class="lead text-muted">Reduce la carga de trabajo</p>
-                <p class="mt-5">Gracias a nuestro sistema SGA, es posible automatizar la mayor parte de tareas realizadas en asociaciones, fundaciones y ONGs, reduciendo el volumnen de trabajo soportado por los voluntarios.<br><br>
-                Facilita las relaciones con la Administración, generando automáticamente la relación de donaciones recibidas que se remite a la Agencia Tributaria y a su vez, emitiendo los certificados a estos contribuyentes.</p>
-              </div>
-            </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Construimos un prototipo</h3>
+            <p>Desarrollamos una versión funcional de la aplicación —gratis y sin compromiso— para que veas el resultado, no una promesa.</p>
           </div>
-
-          <!-- LO QUE NECESITES -->
-
-          <div class="tab-pane" id="Inbox-tab">
-
-                <div class="col-lg-8 align-items-center">
-                <h2 class="fw-bold display-md-4 text-gradient text-gradient-success">¿Qué necesitas?</h2>
-                <p class="lead text-muted">Registro de clientes, alta de productos, listados en excel... lo que necesites. Rétanos.</p>
-                <p class="mt-5">Todo ello es automatizable. El sistema se encarga de obtener la información desde el origen, ya sea un email, un PDF o cualquier otro archivo, y realizar todas las acciones que esperas que haga.<br><br>El objetivo es que tus empleados realicen las tareas importantes y dejen lo redundante y monótono para las máquinas, reduciendo la carga de trabajo de tu plantilla hasta en un 50%.<br><br>Nuestra garantía de satisfacción te permite probar un prototipo de la aplicación que quieras sin ningún coste ni compromiso. Comprobar que no exageramos solo te costará el tiempo que nos dediques, y te prometemos que merecerá la pena.</p>
-              </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Lo pruebas y lo ponemos en marcha</h3>
+            <p>Lo compruebas con tus propios datos. Si te convence, lo llevamos a producción e integramos en tu día a día.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ./Testimonials -->
-    
+    <!-- ============ GARANTÍA ============ -->
+    <section class="section guarantee" id="garantia">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow on-dark">Nuestra garantía</span>
+          <h2>Pruébalo antes de pagar nada</h2>
+          <p>Te construimos un prototipo de la aplicación que necesites sin ningún coste ni compromiso. Comprobar que no exageramos solo te costará el tiempo que nos dediques —y te prometemos que merecerá la pena.</p>
+          <div class="hero-actions" style="margin-top:28px">
+            <a href="#contacto" class="btn btn-accent">Lánzanos tu reto</a>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="big">−50%</div>
+          <div class="lbl">de carga de trabajo repetitivo en tu equipo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section" id="contacto">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow">Hablemos</span>
+            <h2>Cuéntanos qué te gustaría automatizar</h2>
+            <p>Respondemos rápido y sin tecnicismos. El primer prototipo es gratis.</p>
+            <div class="contact-methods">
+              <!-- TODO IHNIWID: pon tu email real de contacto -->
+              <a class="cmethod" href="mailto:contacto@ihniwid.com">
+                <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                <span>Email<small>contacto@ihniwid.com</small></span>
+              </a>
+              <!-- TODO IHNIWID: pon tu número real de WhatsApp (formato internacional, sin +) -->
+              <a class="cmethod" href="https://wa.me/34600000000" target="_blank" rel="noopener">
+                <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+                <span>WhatsApp<small>Respuesta en horario laboral</small></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TODO IHNIWID: para que el formulario envíe emails en un hosting estático
+               (GitHub Pages no ejecuta PHP), crea una cuenta gratis en formspree.io
+               y sustituye YOUR_FORM_ID por tu identificador. Mientras tanto, el
+               email y el WhatsApp de la izquierda ya funcionan. -->
+          <form class="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa <span style="color:var(--muted);font-weight:400">(opcional)</span></label>
+              <input id="empresa" name="empresa" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="mensaje">¿Qué tarea te gustaría automatizar?</label>
+              <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent">Enviar y pedir mi prototipo</button>
+            <p class="form-legal">Solo usamos tus datos para responderte. Sin spam.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Page footer -->
-
-  <!-- ./Footer - Four Columns -->
-  <footer class="site-footer section">
-    <div class="container pb-4">
-      <div class="row g-4 text-center text-md-start">
-        <div class="col-md-4 me-auto">
-          <a href="./" class="link-logo">
-            <img src="public/img/logo5.png" alt="" class="logo mb-4">
-          </a>
-          <p>IHNIWID Solutions, estudio de desarrollo de aplicaciones informáticas, especializado en automatización de procesos.</p>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <a href="#top" class="brand"><img src="public/img/logo.svg" alt="" width="30" height="30"><span>IHNIWID</span></a>
+          <p class="about">Estudio de desarrollo de software a medida especializado en automatización de procesos. Invierte tu tiempo en lo importante; de lo repetitivo nos encargamos nosotros.</p>
         </div>
-        <div class="col-md-2">
-          <h6 class="py-2 fw-bold text-uppercase">COMPAÑÍA</h6>
-          <nav class="nav flex-column">
-            <a class="nav-item py-2" href="#">Acerca de</a>
-            <!-- <a class="nav-item py-2" href="#">Services</a> -->
-            <!-- <a class="nav-item py-2" href="blog/">Blog</a> -->
+        <div>
+          <h4>Navegación</h4>
+          <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#garantia">Garantía</a>
           </nav>
         </div>
-        <div class="col-md-2">
-          <h6 class="py-2 fw-bold text-uppercase">SERVICIOS</h6>
-          <nav class="nav flex-column">
-            <a class="nav-item py-2" href="#">Software publicado</a>
-            <!-- <a class="nav-item py-2" href="#">API</a> -->
-            <!-- <a class="nav-item py-2" href="#">Customers</a> -->
+        <div>
+          <h4>Contacto</h4>
+          <nav>
+            <a href="#contacto">Pide tu prototipo</a>
+            <!-- TODO IHNIWID: mismos datos reales que arriba -->
+            <a href="mailto:contacto@ihniwid.com">contacto@ihniwid.com</a>
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
           </nav>
-        </div>
-        <div class="col-md-2">
-          <h6 class="py-2 fw-bold text-uppercase">CANALES</h6>
-          <nav class="nav flex-column">
-            <a class="nav-item py-2" href="#">Vías de contacto</a>
-            <!-- <a class="nav-item py-2" href="contact.html">Contact</a> -->
-            <!-- <a class="nav-item py-2" href="#">Search</a> -->
-          </nav>
-        </div>
-        <div class="col-12">
-          <p><b>Estamos trabajando en la web, en breves mostrará las aplicaciones que tenemos en producción y a los satisfechos clientes que las disfrutan,<br>mientras tanto, disculpa las molestias.</b></p>
         </div>
       </div>
-      <hr class="mt-5">
-      <div class="row small align-items-center">
-        <div class="col-md-4">
-          <p class="mt-2 mb-md-0 text-secondary text-center text-md-start">© 2024 ihniwid.com. Todos los derechos reservados</p>
-        </div>
-        <div class="col-md-8">
-          <nav class="nav social-icons justify-content-center justify-content-md-end">
-            <a href="#" class="btn btn-sm btn-facebook me-3">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-twitter text-white  me-3">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-whatsapp me-3">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-instagram text-white  me-3">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </nav>
+      <div class="foot-bottom">
+        <span>© <span id="year">2025</span> IHNIWID Solutions. Todos los derechos reservados.</span>
+        <!-- TODO IHNIWID: enlaza tus redes reales o elimina las que no uses -->
+        <div class="social" aria-label="Redes sociales">
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.52v14H.24V8zm7.5 0h4.34v1.9h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3 5.42 6.9V22h-4.52v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V22H7.74V8z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Back to top -->
-  <button class="btn btn-warning shadow-warning rounded-circle p-3 d-flex align-items-center justify-content-center scroll-to-top">
-    <i data-feather="chevron-up" width="18" height="18"></i>
-  </button>
-
-  <!--
-    Compiled js scripts.
-    We created and included a webpack configuration file you can compile the js.
-    Please refer to the docs in order to learn how to compile and replace this file.
-  -->
-  <script src="public/js/dashcore.95cbb7260081cb946756.js"></script>
-  <script src="public/js/loading.b6bb5062cb3673f443b3.js"></script>
+  <script>
+    // Menú móvil
+    (function () {
+      var t = document.getElementById('navToggle');
+      var m = document.getElementById('menu');
+      if (t && m) {
+        t.addEventListener('click', function () {
+          var open = m.classList.toggle('open');
+          t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        m.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); });
+        });
+      }
+      // Año dinámico
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
+
 </html>
