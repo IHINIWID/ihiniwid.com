@@ -188,11 +188,9 @@
     .logos p { text-align: center; color: var(--muted); font-size: 13px; font-weight: 600;
       letter-spacing: .08em; text-transform: uppercase; margin-bottom: 26px; }
     .logo-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px 56px; }
-    .logo-row img { height: 38px; width: auto; opacity: .5; filter: brightness(0); transition: opacity .2s, filter .2s; }
+    .logo-row img { height: 34px; width: auto; opacity: .5; filter: brightness(0); transition: opacity .2s, filter .2s; }
     .logo-row img:hover { opacity: 1; filter: none; } /* recupera el color real del logo */
-    .logo-text { font-size: 25px; font-weight: 800; color: #737C8C; letter-spacing: -.02em; transition: color .2s; }
-    .logo-text b { color: #5A6577; }
-    .logo-text:hover { color: var(--ink); }
+    .logo-row img.logo-wide { height: 30px; } /* logos horizontales (wordmark) algo más bajos */
 
     /* ---- Servicios -------------------------------------------------------- */
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -359,9 +357,7 @@
         <div class="logo-row">
           <img src="public/img/logos/6.svg" alt="Souk" title="Souk">
           <img src="public/img/logos/7.svg" alt="Capimora" title="Capimora">
-          <!-- TODO IHNIWID: envíame el logo real de FarmaciasDirect (.svg o .png)
-               y sustituyo este texto por la imagen. -->
-          <span class="logo-text" aria-label="FarmaciasDirect">Farmacias<b>Direct</b></span>
+          <img src="public/img/logos/farmaciasdirect.svg" alt="FarmaciasDirect" title="FarmaciasDirect" class="logo-wide">
         </div>
       </div>
     </section>
