@@ -218,6 +218,20 @@
     .step p { color: var(--muted); font-size: 15px; }
     @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
 
+    /* ---- Casos reales ----------------------------------------------------- */
+    .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .case { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+      padding: 28px 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+    .case-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+    .case-head h3 { font-size: 20px; }
+    .case-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+      color: var(--brand); background: var(--brand-tint); padding: 5px 11px; border-radius: 999px; white-space: nowrap; }
+    .case p { color: var(--muted); font-size: 15.5px; }
+    .case .result { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);
+      display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); font-size: 14.5px; }
+    .case .result svg { color: var(--accent-strong); flex: none; }
+    @media (max-width: 760px) { .cases { grid-template-columns: 1fr; } }
+
     /* ---- Garantía (banda destacada) --------------------------------------- */
     .guarantee { background: linear-gradient(135deg, #312E81 0%, #4338CA 100%); color: #fff; }
     .guarantee .wrap { display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center; }
@@ -289,6 +303,7 @@
       </a>
       <nav class="nav-links" id="menu" aria-label="Principal">
         <a href="#servicios">Servicios</a>
+        <a href="#casos">Casos</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#garantia">Garantía</a>
         <a href="#contacto" class="btn btn-accent">Pide tu prototipo gratis</a>
@@ -357,6 +372,7 @@
         <div class="logo-row">
           <img src="public/img/logos/6.svg" alt="Souk" title="Souk">
           <img src="public/img/logos/7.svg" alt="Capimora" title="Capimora">
+          <img src="public/img/logos/8.svg" alt="ASEDA ONGD" title="ASEDA ONGD">
           <img src="public/img/logos/farmaciasdirect.svg" alt="FarmaciasDirect" title="FarmaciasDirect" class="logo-wide">
         </div>
       </div>
@@ -397,8 +413,46 @@
       </div>
     </section>
 
+    <!-- ============ CASOS REALES ============ -->
+    <section class="section section-soft" id="casos">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Casos reales</span>
+          <h2>Lo que ya automatizamos para ellos</h2>
+          <p>Clientes reales que dejaron de hacer a mano lo que ahora hace el software.</p>
+        </div>
+        <div class="cases">
+
+          <article class="case">
+            <div class="case-head"><h3>Souk</h3><span class="case-tag">Lonja</span></div>
+            <p>Gestión de inventario automatizada. El control de existencias deja de hacerse a mano: el stock se actualiza y se cuadra solo.</p>
+            <div class="result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Inventario siempre al día, sin recuentos manuales</div>
+          </article>
+
+          <article class="case">
+            <div class="case-head"><h3>Capimora</h3><span class="case-tag">Datos y web</span></div>
+            <p>Automatización de su base de datos e inventario, sincronizados con una web dinámica que se actualiza sola a partir de esos datos.</p>
+            <div class="result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Catálogo y stock siempre sincronizados</div>
+          </article>
+
+          <article class="case">
+            <div class="case-head"><h3>ASEDA ONGD</h3><span class="case-tag">ONG</span></div>
+            <p>Contabilidad automatizada, gestión de padrinos y envío masivo de comunicaciones personalizadas, además de las gestiones con la Agencia Tributaria procesadas por lotes.</p>
+            <div class="result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Días —a veces semanas— de trabajo manual ahorrados</div>
+          </article>
+
+          <article class="case">
+            <div class="case-head"><h3>FarmaciasDirect</h3><span class="case-tag">Farmacia online</span></div>
+            <p>Conciliación de facturas automática: cada factura se cuadra sola con su pedido y su pago, y el sistema señala las discrepancias sin revisión manual.</p>
+            <div class="result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Facturas cuadradas sin repasarlas a mano</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CÓMO FUNCIONA ============ -->
-    <section class="section section-soft" id="como-funciona">
+    <section class="section" id="como-funciona">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Cómo trabajamos</span>
@@ -452,24 +506,27 @@
             <h2>Cuéntanos qué te gustaría automatizar</h2>
             <p>Respondemos rápido y sin tecnicismos. El primer prototipo es gratis.</p>
             <div class="contact-methods">
-              <!-- TODO IHNIWID: pon tu email real de contacto -->
-              <a class="cmethod" href="mailto:contacto@ihniwid.com">
+              <a class="cmethod" href="mailto:alexqg@ihniwid.com">
                 <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-                <span>Email<small>contacto@ihniwid.com</small></span>
+                <span>Email<small>alexqg@ihniwid.com</small></span>
               </a>
-              <!-- TODO IHNIWID: pon tu número real de WhatsApp (formato internacional, sin +) -->
-              <a class="cmethod" href="https://wa.me/34600000000" target="_blank" rel="noopener">
-                <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
-                <span>WhatsApp<small>Respuesta en horario laboral</small></span>
-              </a>
+              <div class="cmethod">
+                <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <span>Respuesta rápida<small>Te contestamos en 24 h laborables</small></span>
+              </div>
             </div>
           </div>
 
-          <!-- TODO IHNIWID: para que el formulario envíe emails en un hosting estático
-               (GitHub Pages no ejecuta PHP), crea una cuenta gratis en formspree.io
-               y sustituye YOUR_FORM_ID por tu identificador. Mientras tanto, el
-               email y el WhatsApp de la izquierda ya funcionan. -->
-          <form class="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- El formulario usa FormSubmit.co (sin backend, gratis, envía a tu email).
+               La PRIMERA vez que llegue un envío, FormSubmit manda a alexqg@ihniwid.com
+               un correo para confirmar la dirección una sola vez; a partir de ahí
+               funciona solo. Para ocultar el email en el código puedes cambiarlo luego
+               por el endpoint con alias que te da FormSubmit tras activarlo. -->
+          <form class="contact" action="https://formsubmit.co/alexqg@ihniwid.com" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo contacto desde ihniwid.com">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
             <div class="field">
               <label for="nombre">Nombre</label>
               <input id="nombre" name="nombre" type="text" autocomplete="name" required>
@@ -507,6 +564,7 @@
           <h4>Navegación</h4>
           <nav>
             <a href="#servicios">Servicios</a>
+            <a href="#casos">Casos</a>
             <a href="#como-funciona">Cómo funciona</a>
             <a href="#garantia">Garantía</a>
           </nav>
@@ -515,19 +573,13 @@
           <h4>Contacto</h4>
           <nav>
             <a href="#contacto">Pide tu prototipo</a>
-            <!-- TODO IHNIWID: mismos datos reales que arriba -->
-            <a href="mailto:contacto@ihniwid.com">contacto@ihniwid.com</a>
-            <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:alexqg@ihniwid.com">alexqg@ihniwid.com</a>
           </nav>
         </div>
       </div>
       <div class="foot-bottom">
         <span>© <span id="year">2025</span> IHNIWID Solutions. Todos los derechos reservados.</span>
-        <!-- TODO IHNIWID: enlaza tus redes reales o elimina las que no uses -->
-        <div class="social" aria-label="Redes sociales">
-          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8h4.52v14H.24V8zm7.5 0h4.34v1.9h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3 5.42 6.9V22h-4.52v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V22H7.74V8z"/></svg></a>
-          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
-        </div>
+        <a href="mailto:alexqg@ihniwid.com">alexqg@ihniwid.com</a>
       </div>
     </div>
   </footer>
